@@ -1,0 +1,1052 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=d25a1f4f-4d18-4b4d-bc95-aea571e6a650");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/****
+	TIPOGRAFIA
+****/
+@font-face {
+  font-family: "Neue Haas Unica W01 UltraLight";
+  src: url("../fonts/dfc4afbf-ccfb-494f-9ee0-8bc445d7bea7.eot?#iefix");
+  src: url("../fonts/dfc4afbf-ccfb-494f-9ee0-8bc445d7bea7.eot?#iefix") format("eot"), url("../fonts/c361e26e-4526-46d8-a9f6-c74877ea3bce.woff2") format("woff2"), url("../fonts/ab956d19-7e42-4da4-b0be-7e64d554b081.woff") format("woff"), url("../fonts/eeeae646-c964-4dbb-9269-da8dc83b40f7.ttf") format("truetype"), url("../fonts/3c611b98-8e5e-4813-b686-3e7417601af0.svg#3c611b98-8e5e-4813-b686-3e7417601af0") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Thin";
+  src: url("../fonts/ba48202e-b3fb-4d2e-b782-6e50f7f710b9.eot?#iefix");
+  src: url("../fonts/ba48202e-b3fb-4d2e-b782-6e50f7f710b9.eot?#iefix") format("eot"), url("../fonts/89cc27d4-e9bd-43de-ab56-cc7015e1ff7d.woff2") format("woff2"), url("../fonts/ad1cd90c-7793-4c0a-a7ce-4a6122b0e265.woff") format("woff"), url("../fonts/4c5113af-3402-4eb0-8a1e-59b38d4c4dc6.ttf") format("truetype"), url("../fonts/cdab2db0-1eb1-4654-ad89-5a64b95eab50.svg#cdab2db0-1eb1-4654-ad89-5a64b95eab50") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Light";
+  src: url("../fonts/001e59a9-197e-4fb1-9e72-cef21b186c03.eot?#iefix");
+  src: url("../fonts/001e59a9-197e-4fb1-9e72-cef21b186c03.eot?#iefix") format("eot"), url("../fonts/e5716290-d41e-4c97-a27c-7a20a46ddf45.woff2") format("woff2"), url("../fonts/b681571f-aab2-4935-a99c-6ee1063ce638.woff") format("woff"), url("../fonts/1d88a9b0-aac0-40df-baf7-a630cd19cc5d.ttf") format("truetype"), url("../fonts/40a247b1-2840-4953-b24b-8a82ace0673b.svg#40a247b1-2840-4953-b24b-8a82ace0673b") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Regular";
+  src: url("../fonts/0ebd7648-5847-404a-a88a-28a353c0921c.eot?#iefix");
+  src: url("../fonts/0ebd7648-5847-404a-a88a-28a353c0921c.eot?#iefix") format("eot"), url("../fonts/e0d80810-f7e3-4fea-8c57-ef8116f0465d.woff2") format("woff2"), url("../fonts/27645c8a-608b-4abf-a2f1-c4407b576723.woff") format("woff"), url("../fonts/bd3b3439-8eff-445c-80ed-87064138ca7d.ttf") format("truetype"), url("../fonts/bf3731ee-64fe-49c1-b8a6-a4edbff3c74a.svg#bf3731ee-64fe-49c1-b8a6-a4edbff3c74a") format("svg"); }
+
+@font-face {
+  font-family: "Neue Haas Unica W01 Medium It";
+  src: url("../fonts/56b738a7-54b9-4e8c-a470-d96972ab3303.eot?#iefix");
+  src: url("../fonts/56b738a7-54b9-4e8c-a470-d96972ab3303.eot?#iefix") format("eot"), url("../fonts/2418a824-3af2-42d7-a62e-f7a77cf487d1.woff2") format("woff2"), url("../fonts/86b76db5-9343-473a-a106-60683cec7626.woff") format("woff"), url("../fonts/2b883332-01dc-4b55-ac6a-d24c84f0e334.ttf") format("truetype"), url("../fonts/7de50dd1-4a4e-47bf-bb5d-33bf1450649a.svg#7de50dd1-4a4e-47bf-bb5d-33bf1450649a") format("svg"); }
+
+/*******************
+********************
+	Media queries
+		EJEMPLO
+.sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+
+*******************/
+/************************
+**************************
+	Transitions
+	EJEMPLO
+a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+
+*****************************/
+/************************
+**************************
+	Visually hide an element
+http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+*****************************/
+.visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+body {
+  font-family: "Neue Haas Unica W01 Regular", "Arial", "Helvetica", sans-serif;
+  background: #011133;
+  color: #fff;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.46;
+  background: #011133 url("../../images/mayan_bg.jpg") top center/100% auto; }
+
+html {
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.contenedor-center {
+  /*  display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    */ }
+
+#the-wrapper {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 10; }
+
+.row {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+/*****************
+	header
+
+******************/
+header {
+  width: 100%;
+  position: relative;
+  height: 150px; }
+  @media only screen and (max-width: 30em) {
+    header {
+      height: 170px; } }
+
+small {
+  font-size: 70%; }
+
+.menu {
+  height: 77px;
+  margin: 0 auto;
+  width: 842px;
+  position: relative; }
+  .menu ul {
+    position: relative;
+    width: 100%;
+    display: block;
+    background: url("../../images/mayan_menu.png") no-repeat center top;
+    height: 77px;
+    margin-top: 70px; }
+  .menu li {
+    display: block;
+    float: left;
+    width: 140px; }
+    .menu li a {
+      display: block;
+      height: 77px;
+      width: 100%;
+      line-height: 62px;
+      text-align: center;
+      font-family: "Neue Haas Unica W01 Regular";
+      text-shadow: 1px 1px 1px #591C0D; }
+      .menu li a:hover {
+        text-decoration: none;
+        color: #fff; }
+  .menu .logo {
+    position: relative;
+    margin-top: -75px;
+    display: block;
+    width: 280px; }
+    .menu .logo img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%; }
+
+/*******************************************
+		menu mobile
+
+**********************************************/
+/****** nav ******/
+#nav-trigger {
+  display: none;
+  text-align: center;
+  clear: both;
+  margin-top: 5px;
+  float: left;
+  position: relative;
+  z-index: 20; }
+  #nav-trigger span {
+    display: block;
+    background-color: none;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    clear: both;
+    width: 300px;
+    margin: 0 auto;
+    min-height: 120px;
+    text-indent: -99999px;
+    /*
+	   	font-size: 11px;
+	   	padding: 5px 10px;
+		letter-spacing: 1px;
+		border: 2px solid $acent;
+	    border-radius: 20px;
+		
+		line-height: 22px;
+		*/
+    background: url(../../images/mayan_logo.png) no-repeat top center;
+    background-size: 150px auto; }
+    @media only screen and (max-width: 30em) {
+      #nav-trigger span {
+        background-position: 10px 0; } }
+  #nav-trigger span:after {
+    /*  display: inline-block;
+      margin-left: 10px;
+      width: 20px;
+      height: 10px;
+      content: "";
+      border-left: solid 10px transparent;
+      border-top: solid 10px $acent;
+      border-right: solid 10px transparent; 
+      */ }
+  #nav-trigger span.open:after {
+    /*  border-left: solid 10px transparent;
+      border-top: none;
+      border-bottom: solid 10px $acent;
+      border-right: solid 10px transparent; 
+      */ }
+  @media only screen and (max-width: 30em) {
+    #nav-trigger {
+      width: 100%;
+      float: none; }
+      #nav-trigger span {
+        width: 100%; } }
+
+nav#nav-mobile {
+  position: relative;
+  display: none;
+  clear: both;
+  background: url("../../images/mayan_logo_mobile.png") no-repeat top left/100% auto;
+  z-index: 10;
+  width: 300px;
+  top: -22px;
+  z-index: 10; }
+  nav#nav-mobile ul {
+    display: none;
+    list-style-type: none;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+    height: 200px;
+    padding-top: 20px; }
+    nav#nav-mobile ul li {
+      display: block;
+      padding: 2px 0;
+      margin: 0 2px;
+      border-bottom: solid 1px #591C0D;
+      border-top: solid 1px #EBCC48; }
+    nav#nav-mobile ul li:first-child {
+      border-top: none; }
+    nav#nav-mobile ul li:last-child {
+      border-bottom: none; }
+    nav#nav-mobile ul a {
+      display: block;
+      color: #fff;
+      padding: 5px;
+      font-size: 15px;
+      font-family: "Neue Haas Unica W01 Regular"; }
+      nav#nav-mobile ul a:hover {
+        color: #fff;
+        text-decoration: none; }
+    nav#nav-mobile ul li.logo {
+      display: none; }
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 1120px) {
+  #nav-trigger {
+    display: block; }
+  nav#nav-main {
+    display: none; }
+  nav#nav-mobile {
+    display: block; } }
+
+/****************
+user
+
+***********************************************/
+.user {
+  position: absolute;
+  right: 20px;
+  top: -50px;
+  width: 150px;
+  z-index: 50; }
+  .user a {
+    padding-top: 10px;
+    display: block; }
+    .user a:hover {
+      color: #fff;
+      text-decoration: none; }
+  .user p {
+    position: relative; }
+  .user .avatar {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: block;
+    overflow: hidden;
+    border: 3px solid #00B7C6;
+    margin: 0 auto; }
+    .user .avatar img {
+      width: 100%; }
+  .user .points {
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    padding: 2px;
+    background: #00B7C6;
+    border-radius: 3px; }
+  .user .btn-main {
+    width: 100%;
+    min-width: 100%; }
+  @media only screen and (max-width: 765px) {
+    .user {
+      top: 0px; }
+      .user .avatar {
+        width: 80px;
+        height: 80px; } }
+
+.user-points-content {
+  text-align: center;
+  height: 30px;
+  border-radius: 5px;
+  border: 3px solid #00B7C6;
+  margin-top: -10px; }
+  .user-points-content .points, .user-points-content button {
+    width: 50%;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    height: 24px;
+    line-height: 24px;
+    background: none;
+    padding: 0;
+    border: 0; }
+  .user-points-content .points {
+    background: #fff;
+    color: #00B7C6; }
+
+.container-center {
+  margin: 0 auto;
+  padding-bottom: 150px; }
+
+.item-centered {
+  display: block;
+  margin: 0 auto;
+  float: none; }
+
+/*****************************
+
+		TEXTOS
+
+******************************/
+.main-title {
+  margin: 10px 0; }
+  .main-title span {
+    color: #00B7C6; }
+
+.text-centered {
+  text-align: center; }
+
+@media only screen and (max-width: 30em) {
+  p {
+    font-size: 13px; } }
+
+h1 {
+  font-size: 35px;
+  font-family: "Neue Haas Unica W01 Thin"; }
+  @media only screen and (max-width: 30em) {
+    h1 {
+      font-size: 25px; } }
+
+h2 {
+  font-size: 28px;
+  font-family: "Neue Haas Unica W01 Thin"; }
+  @media only screen and (max-width: 30em) {
+    h2 {
+      font-size: 20px; } }
+
+h3 {
+  font-size: 22px; }
+  @media only screen and (max-width: 30em) {
+    h3 {
+      font-size: 17px; } }
+
+h4 {
+  font-size: 18px; }
+  @media only screen and (max-width: 30em) {
+    h4 {
+      font-size: 15px; } }
+
+/*****************************
+
+		Modal
+******************************/
+.modal-content {
+  background: #011133; }
+  .modal-content .modal-title {
+    text-align: center; }
+  .modal-content .modal-body {
+    font-size: 80%; }
+
+/*****************************
+
+		Sponsors
+
+******************************/
+#ourSponsors ul {
+  height: 400px;
+  margin-top: 20px; }
+  #ourSponsors ul li img {
+    width: 100%; }
+
+/*****************************
+
+		footer
+
+******************************/
+#mainFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 142px; }
+  #mainFooter a:hover {
+    color: #fff; }
+  @media only screen and (max-width: 30em) {
+    #mainFooter {
+      height: 130px; } }
+  #mainFooter ul {
+    width: 220px;
+    display: block;
+    margin: 0px auto 20px;
+    float: left; }
+    #mainFooter ul img {
+      width: 100%; }
+    @media only screen and (max-width: 30em) {
+      #mainFooter ul {
+        float: none;
+        clear: both;
+        width: 160px; } }
+
+.logo-deltaAm {
+  max-width: 370px;
+  padding: 10px 0;
+  display: block;
+  margin: 0 auto; }
+  @media only screen and (max-width: 30em) {
+    .logo-deltaAm {
+      margin: 5px auto;
+      padding: 10px 0 0;
+      display: block;
+      width: 280px; } }
+
+.footer-info {
+  font-size: 70%;
+  line-height: 120%;
+  width: 500px;
+  margin: 0 auto; }
+  .footer-info a {
+    text-decoration: underline; }
+  @media only screen and (max-width: 30em) {
+    .footer-info {
+      width: 100%; }
+      .footer-info p {
+        font-size: 10px;
+        text-align: center;
+        display: block;
+        clear: both; } }
+
+/*****************************
+
+		extras
+
+******************************/
+.leaf {
+  position: absolute;
+  z-index: 2;
+  position: fixed; }
+  .leaf img {
+    width: 70%;
+    max-width: 70%; }
+    @media only screen and (max-width: 30em) {
+      .leaf img {
+        width: 100%;
+        max-width: 100%; } }
+
+.leaf-left {
+  left: 0;
+  bottom: 0; }
+
+.leaf-right {
+  right: 0;
+  bottom: 0; }
+  .leaf-right img {
+    float: right; }
+
+.btn-main {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  min-width: 280px;
+  padding: 15px;
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 50px;
+  text-transform: uppercase; }
+  .btn-main:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-decoration: none; }
+  .btn-main:before {
+    position: absolute;
+    height: 100%;
+    font-size: 125%;
+    line-height: 3.5;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    left: 70%;
+    opacity: 0;
+    top: -2.5px; }
+  .btn-main:hover:before {
+    left: 85%;
+    opacity: 1; }
+  .btn-main span {
+    font-family: Arial, Helvetica;
+    letter-spacing: 1px; }
+
+.link-basic:hover {
+  color: #00B7C6; }
+
+.close {
+  color: #fff;
+  opacity: 1; }
+
+#btnSponsor {
+  width: 149px;
+  height: 157px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: url("../../images/mayan_sponsors.png") no-repeat top center;
+  text-indent: -99999px;
+  z-index: 11;
+  margin-top: -79px; }
+  @media only screen and (max-width: 765px) {
+    #btnSponsor {
+      display: none; } }
+
+#btnSponsorMobile {
+  width: 149px;
+  height: 40px;
+  position: relative;
+  background: url("../../images/mayan_sponsors_mobile.png") no-repeat top center;
+  text-indent: -99999px;
+  z-index: 11;
+  display: none; }
+  @media only screen and (max-width: 765px) {
+    #btnSponsorMobile {
+      display: block;
+      float: right; } }
+  @media only screen and (max-width: 30em) {
+    #btnSponsorMobile {
+      display: block;
+      margin: 0 auto;
+      float: none; } }
+
+/*
+#btn-logout{
+   background: $acento;
+   font-size: 12px;
+   @include bp-small {
+    font-size: 10px;
+   }
+}
+*/
+#btn-logout {
+  background: #00B7C6;
+  font-size: 12px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  left: 100px;
+  bottom: 0px;
+  z-index: 55; }
+  @media only screen and (max-width: 30em) {
+    #btn-logout {
+      font-size: 10px; } }
+
+#the-profile .avatar {
+  position: relative;
+  padding-bottom: 25px; }
+  #the-profile .avatar .user-avatar {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid;
+    margin: 0 auto; }
+  #the-profile .avatar .avatar-influencer {
+    position: relative;
+    z-index: 10;
+    float: right;
+    margin-top: -100px;
+    right: 50px;
+    background: url(../../images/mayan_profile.png) no-repeat center center;
+    width: 166px;
+    height: 180px;
+    text-align: center; }
+    #the-profile .avatar .avatar-influencer img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: 25px;
+      border: 4px solid; }
+
+#the-profile .points {
+  text-transform: uppercase; }
+  #the-profile .points .count {
+    font-size: 35px;
+    font-weight: lighter;
+    width: 150px; }
+
+#the-profile .points-total {
+  font-family: "Neue Haas Unica W01 Thin";
+  font-size: 18px; }
+
+#the-profile h3 {
+  font-size: 20px;
+  font-family: "Neue Haas Unica W01 Medium It"; }
+
+#the-profile caption {
+  color: #fff;
+  font-family: "Neue Haas Unica W01 Regular", "Arial", "Helvetica", sans-serif; }
+
+#the-profile table {
+  margin-top: 20px; }
+
+#the-profile .col-sm-6 .col-sm-6 .btn-main {
+  min-width: 220px; }
+
+#the-profile .main-title {
+  margin-bottom: 0px; }
+
+#influencers picture {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  border: 6px solid; }
+  #influencers picture img {
+    width: 100%; }
+
+#influencers h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 20px; }
+  @media only screen and (max-width: 30em) {
+    #influencers h2 {
+      padding-bottom: 10px; } }
+
+#influencers li {
+  padding-bottom: 20px; }
+
+#influencers .social li {
+  display: inline-block;
+  padding: 10px 1px; }
+
+#influencers .social a {
+  display: block; }
+  #influencers .social a img {
+    border-radius: 50%;
+    border: 1px solid #fff; }
+
+#the-activities {
+  /*
+  li:nth-child(3n+2){
+    background: #66FF66;
+  }
+  li:nth-child(5n+1){
+    background: #EBE54D;
+  }
+  li:nth-child(7n+2){
+    background: #BF1388;
+  }
+  li:nth-last-of-type(1){
+    background: red;
+  }
+  */ }
+  #the-activities li {
+    height: 120px; }
+    #the-activities li picture {
+      width: 85px;
+      height: 85px;
+      overflow: hidden;
+      border-radius: 50%;
+      display: block;
+      margin: 10px;
+      float: left;
+      border: 2px solid #EBCC48;
+      box-shadow: 1px 3px 2px #2C1307; }
+      #the-activities li picture img {
+        width: 100%; }
+    #the-activities li h2 {
+      font-size: 16px;
+      margin-top: 35px; }
+      @media only screen and (max-width: 765px) {
+        #the-activities li h2 {
+          margin-top: 0px;
+          padding-top: 30px; } }
+  #the-activities li:nth-child(odd) {
+    background: url("../../images/mayan_tabla1.png") no-repeat top center; }
+    @media only screen and (max-width: 765px) {
+      #the-activities li:nth-child(odd) {
+        background: url("../../images/mayan_tabla3.png") no-repeat top center;
+        background-size: cover; } }
+  #the-activities li:nth-child(even) {
+    background: url("../../images/mayan_tabla2.png") no-repeat top center; }
+    @media only screen and (max-width: 765px) {
+      #the-activities li:nth-child(even) {
+        background: url("../../images/mayan_tabla3.png") no-repeat top center;
+        background-size: cover; } }
+
+ol.list {
+  padding-top: 10px; }
+  ol.list li {
+    padding-bottom: 15px; }
+  ol.list li:last-child {
+    padding-bottom: 0; }
+
+strong {
+  font-family: "Neue Haas Unica W01 Medium It"; }
+
+.participant-1 img, .participant-1 .user-avatar {
+  border-color: #66FF66 !important; }
+
+.participant-1 picture {
+  border-color: #66FF66 !important; }
+
+.participant-2 img, .participant-2 .user-avatar {
+  border-color: #EBE54D !important; }
+
+.participant-2 picture {
+  border-color: #EBE54D !important; }
+
+.participant-3 img, .participant-3 .user-avatar {
+  border-color: #BF1388 !important; }
+
+.participant-3 picture {
+  border-color: #BF1388 !important; }
+
+.participant-4 img, .participant-4 .user-avatar {
+  border-color: #00B7C6 !important; }
+
+.participant-4 picture {
+  border-color: #00B7C6 !important; }
+
+.alert-normal {
+  background: #00B7C6;
+  color: #fff;
+  text-align: center; }
+
+form input[type="text"], form input[type="email"], form select, form option {
+  width: 100%;
+  color: #011133; }
+
+form label {
+  width: 100%; }
+
+form .small {
+  font-size: 80%; }
+  form .small a {
+    text-decoration: underline; }
+    form .small a:hover {
+      color: #00B7C6; }
+
+#registro .avatar {
+  margin: 50px auto 0;
+  width: 150px;
+  display: block;
+  border-radius: 50%;
+  height: 150px;
+  overflow: hidden; }
+  #registro .avatar img {
+    width: 100%; }
+
+#choose-activities .activity-info {
+  min-height: 30px;
+  padding: 20px;
+  font-family: "Neue Haas Unica W01 Thin"; }
+  #choose-activities .activity-info:hover {
+    cursor: pointer; }
+  #choose-activities .activity-info span {
+    margin-top: 20px;
+    display: block; }
+
+#choose-activities .selected {
+  background: #00B7C6;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+
+#choose-activities picture {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  margin: 10px;
+  float: left;
+  border: 2px solid #00B7C6; }
+  #choose-activities picture img {
+    width: 100%; }
+
+#choose-activities .activity-item {
+  float: left;
+  margin-top: 25px; }
+
+#choose-activities .col-sm-6 {
+  display: table; }
+
+#choose-influencer .mini-influencer {
+  background: none;
+  border: 0;
+  padding: 20px;
+  width: 100%;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+  #choose-influencer .mini-influencer picture {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block; }
+    #choose-influencer .mini-influencer picture img {
+      width: 100%; }
+
+#choose-influencer h2 {
+  font-size: 16px;
+  text-align: center; }
+
+#choose-influencer .selected {
+  background: #00B7C6;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+
+/***********
+            Validaciones
+***************************/
+input.parsley-success, select.parsley-success, textarea.parsley-success, .alert-success {
+  color: #fff;
+  background-color: #19D2AD;
+  border: 0;
+  border-radius: 0; }
+
+input.parsley-error, select.parsley-error, textarea.parsley-error, .alert-danger {
+  color: #fff;
+  background-color: red;
+  border: 0;
+  border-radius: 0; }
+
+.alert-success, .alert-danger {
+  text-align: center; }
+
+.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in; }
+  .parsley-errors-list.filled {
+    opacity: 1;
+    z-index: 500;
+    position: relative;
+    background: red;
+    padding: 5px; }
+
+li.parsley-required {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: #81F7F3;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #0B615E;
+  padding: 5px;
+  border: 2px solid #01DFD7;
+  position: absolute;
+  z-index: 800; }
+
+input.send-btn.guardar {
+  border: 0;
+  background: url("../images/ok.png") center center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+input.send-btn.eliminar {
+  border: 0;
+  background: url("../images/trash.png") center center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+input.send-btn.rechazar {
+  border: 0;
+  background: url("../images/delete.png") center center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+.show {
+  display: block; }
+
+[data-tooltip], .tooltip {
+  position: relative;
+  cursor: pointer; }
+
+[data-tooltip]:before, [data-tooltip]:after, .tooltip:before, .tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "alpha(Opacity=0)";
+  filter: progid:dximagetransform.microsoft.alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  pointer-events: none; }
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after, .tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "alpha(Opacity=100)";
+  filter: progid:dximagetransform.microsoft.alpha(Opacity=100);
+  opacity: 1; }
+
+.tooltip:before, [data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: ""; }
+
+.tooltip:after, [data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 120px;
+  background-color: #1783ff;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  line-height: 1.2; }
+
+[data-tooltip]:before, [data-tooltip]:after, .tooltip:before, .tooltip:after, .tooltip-top:before, .tooltip-top:after {
+  bottom: 100%;
+  left: 50%; }
+
+[data-tooltip]:before, .tooltip:before, .tooltip-top:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #1783ff; }
+
+[data-tooltip]:after, .tooltip:after, .tooltip-top:after {
+  margin-left: -55px; }
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after, .tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after, .tooltip-top:hover:before, .tooltip-top:hover:after, .tooltip-top:focus:before, .tooltip-top:focus:after {
+  -webkit-transform: translatey(-12px);
+  -moz-transform: translatey(-12px);
+  transform: translatey(-12px); }
+
+.tooltip-bottom:before, .tooltip-bottom:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%; }
+
+.tooltip-bottom:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #1783ff; }
+
+.tooltip-bottom:hover:before, .tooltip-bottom:hover:after, .tooltip-bottom:focus:before, .tooltip-bottom:focus:after {
+  -webkit-transform: translatey(12px);
+  -moz-transform: translatey(12px);
+  transform: translatey(12px); }

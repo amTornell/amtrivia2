@@ -1,0 +1,532 @@
+body{
+	font-family: $font-base;
+	//font-family: "Neue Haas Unica W01 Regular";
+    background: $blue-dark;
+    color: $white;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.46;
+  	background: $blue-dark url('../../images/mayan_bg.jpg') top center / 100% auto ; 
+}
+
+html {
+  height: 100%;
+}
+
+
+a{
+	text-decoration: none;
+	color: $white;
+}
+
+.contenedor-center {
+  /*  display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    */
+}
+
+#the-wrapper{
+	min-height:100%;
+	position:relative;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.row{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/*****************
+	header
+
+******************/
+
+header{
+	width: 100%;
+	position: relative;
+	height: 150px;
+	 @include bp-small {
+      height: 170px;
+    }
+
+}
+
+small{
+	font-size: 70%;
+}
+.menu{
+	height: 77px;
+	margin: 0 auto;
+	width: 842px;
+	position: relative;
+	ul{
+		position: relative;
+		width: 100%;
+		display: block;
+		background:url('../../images/mayan_menu.png') no-repeat center top;
+		height: 77px;
+		margin-top: 70px;
+	}
+	li{
+		display: block;
+		float: left;
+		width: 140px;
+		a{
+			display: block;
+			height: 77px;
+			width: 100%;
+			line-height: 62px;
+			text-align: center;
+			font-family: $font-regular;
+			text-shadow: 1px 1px 1px $cafe;
+			&:hover{
+				text-decoration: none;
+				color: $white;
+			}
+		}
+	}
+	.logo{
+		position: relative;
+		margin-top: -75px;
+		display: block;
+		width: 280px;
+		img{
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+}
+
+
+/*******************************************
+		menu mobile
+
+**********************************************/
+
+/****** nav ******/
+#nav-trigger {
+  display: none;
+  text-align: center; 
+  clear: both;
+  margin-top: 5px;
+  float: left;	
+  position: relative;
+  z-index: 20;		
+	span {
+	    display: block;
+	    background-color: none;
+
+	    color: white;
+	    cursor: pointer;
+	    text-transform: uppercase;
+	    clear: both;
+	    width: 300px;
+	    margin: 0 auto;
+	    min-height: 120px;
+	    text-indent: -99999px;
+	   	/*
+	   	font-size: 11px;
+	   	padding: 5px 10px;
+		letter-spacing: 1px;
+		border: 2px solid $acent;
+	    border-radius: 20px;
+		
+		line-height: 22px;
+		*/
+		background: url(../../images/mayan_logo.png) no-repeat top center;
+		background-size: 150px auto;
+		&:hover {
+      	//background-color:  $blue-dark; 
+      	}
+      	@include bp-small{
+      		background-position: 10px 0;
+      	}
+      	
+	  }
+	  span:after {
+    /*  display: inline-block;
+      margin-left: 10px;
+      width: 20px;
+      height: 10px;
+      content: "";
+      border-left: solid 10px transparent;
+      border-top: solid 10px $acent;
+      border-right: solid 10px transparent; 
+      */
+  	}
+  	span.open:after {
+    /*  border-left: solid 10px transparent;
+      border-top: none;
+      border-bottom: solid 10px $acent;
+      border-right: solid 10px transparent; 
+      */
+  	}
+  	@include bp-small {
+   			width: 100%;
+   			float: none;
+   			span{
+   				width: 100%;
+   			}
+  	}
+}
+ 
+nav#nav-mobile {
+  position: relative;
+  display: none; 
+  clear: both;
+  background: url('../../images/mayan_logo_mobile.png') no-repeat top left / 100% auto;
+  z-index: 10;
+  width: 300px;
+  top: -22px;
+  z-index: 10;
+	 ul {
+	    display: none;
+	    list-style-type: none;
+	    position: relative;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	    width: 80%;
+	    height: 200px;
+	    padding-top: 20px;
+		li {
+			    display: block;
+			    padding: 2px 0;
+			    margin: 0 2px;
+			    border-bottom: solid 1px $cafe;
+			    border-top: solid 1px $yellow;
+		}
+		li:first-child{
+			border-top: none;
+		}
+		li:last-child {
+	    	  border-bottom: none; 
+	    }
+	       a {
+		    display: block;
+		    color: $white;
+		    padding: 5px; 
+		    font-size: 15px;
+		    font-family: $font-regular;
+			&:hover{
+				color: #fff; 
+				text-decoration: none;
+			}
+		}
+		li.logo{
+			display: none;
+		}
+	}// ul
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 1120px) {
+  #nav-trigger {
+    display: block; }
+
+  nav#nav-main {
+    display: none; }
+
+  nav#nav-mobile {
+    display: block; }
+}
+
+
+
+
+
+
+/****************
+user
+
+***********************************************/
+.user{
+	position: absolute;
+	right: 20px;
+	top: -50px;
+	width: 150px;
+	z-index: 50;
+	a{
+		padding-top: 10px;
+		display: block;
+		&:hover{
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	p{
+		position: relative;
+	}
+	.avatar{
+		border-radius: 50%;
+		height: 100px;
+		width: 100px;
+		display: block;
+		overflow: hidden;
+		border: 3px solid $acento;
+		margin: 0 auto;
+		img{
+			width: 100%;
+		}
+	}
+
+	.points{
+		font-size: $font-size-base;
+		font-weight: bold;
+		position: absolute;
+		top: 5px;
+		left: 100px;
+		padding: 2px;
+		background: $acento;
+		border-radius: 3px;
+	}
+
+
+	.btn-main{
+		width: 100%;
+		min-width: 100%;
+	}
+	@include bp-medium {
+   		//width: 100%;
+   		//width: 100px;
+   		top: 0px;
+   		.avatar{
+   			width: 80px;
+   			height: 80px;
+   		}
+  	}
+}
+
+.user-points-content{
+		text-align: center;
+		height: 30px;
+		border-radius: 5px;
+		border: 3px solid $acento;
+		margin-top: -10px;
+		.points, button{
+			width: 50%;
+			display: block;
+			float: left;
+			text-transform: uppercase;
+			height: 24px;
+			line-height: 24px;
+			background: none;
+			padding: 0;
+			border: 0;
+		}
+		.points{
+			background: $white;
+			color: $acent;
+		}
+}
+
+.container-center{
+	margin: 0 auto;
+	padding-bottom: 150px;
+}
+
+.item-centered{
+	display: block;
+	margin: 0 auto;
+	float: none;
+}
+
+/*****************************
+
+		TEXTOS
+
+******************************/
+
+.main-title{
+	margin: 10px 0;
+	span{
+		color: $acento;
+	}
+}
+
+.text-centered{
+	text-align: center;
+}
+
+p{
+	@include bp-small {
+      font-size: 13px;
+    }
+
+}
+
+h1{
+	font-size: 35px;
+	font-family: $font-thin;
+	@include bp-small {
+      font-size: 25px;
+    }
+}
+
+h2{
+	font-size: 28px;
+	font-family: $font-thin;
+	@include bp-small {
+      font-size: 20px;
+    }
+}
+
+h3{
+	font-size: 22px;
+	@include bp-small {
+      font-size: 17px;
+    }
+	
+}
+
+h4{
+	font-size: 18px;
+	@include bp-small {
+      font-size: 15px;
+    }
+}
+/*****************************
+
+		Modal
+******************************/
+
+.modal-content{
+	background: $blue-dark;
+	.modal-title{
+		text-align: center;
+	}
+	.modal-body{
+		font-size: 80%;
+	}
+}
+.modal-backdrop.in {
+//	opacity: 0.9;
+}
+/*****************************
+
+		Sponsors
+
+******************************/
+
+#ourSponsors{
+	ul{
+		height: 400px;
+		margin-top: 20px;
+		li{
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*****************************
+
+		footer
+
+******************************/
+#mainFooter{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	height: 142px;
+	a:hover{
+		color: $white;
+	}
+	@include bp-small {
+    	height: 130px;
+    }
+    ul{
+    	width: 220px;
+    	display: block;
+    	margin: 0px auto 20px;
+    	float: left;
+    	img{
+    		width: 100%;
+    	}
+    	@include bp-small {
+    		float: none;
+    		clear: both;
+    		width: 160px;
+    		
+    	}
+    }
+
+}
+
+.logo-deltaAm{
+	//float: left;
+	max-width: 370px;
+	padding: 10px 0;
+	display: block;
+	margin: 0 auto;
+	@include bp-small {
+     margin: 5px auto;
+     padding: 10px 0 0;
+     display: block;
+     width: 280px;
+    }
+}
+.footer-info{
+	font-size: 70%;
+	line-height: 120%;
+	width: 500px;
+	margin: 0 auto;
+	a{
+		text-decoration: underline;
+	}
+	@include bp-small {
+		width: 100%;
+     	p{	
+     		font-size: 10px;
+     		text-align: center;
+     		display: block;
+     		clear: both;
+     	}
+    }
+}
+
+/*****************************
+
+		extras
+
+******************************/
+
+.leaf{
+	position: absolute;
+	z-index: 2;
+	position: fixed;
+	img{
+		width: 70%;
+		max-width: 70%;
+		@include bp-small {
+    		width: 100%;
+    		max-width: 100%;
+    	}
+	}
+}
+
+.leaf-left{
+	left: 0;
+	bottom: 0;
+}
+
+.leaf-right{
+	right: 0;
+	bottom: 0;
+	img{
+		float: right;
+	}
+}

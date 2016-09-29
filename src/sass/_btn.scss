@@ -1,0 +1,113 @@
+.btn-main{
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    min-width: 280px;
+    padding: 15px;
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 50px;
+    text-transform: uppercase;
+    &:hover{
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
+        color: $white;
+        text-decoration: none;
+    }
+    &:before{
+       position: absolute;
+        height: 100%;
+        font-size: 125%;
+        line-height: 3.5;
+        color: #fff;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        left: 70%;
+        opacity: 0;
+        top: -2.5px; 
+    }
+    &:hover:before {
+        left: 85%;
+        opacity: 1;
+    }
+    span{
+     	font-family: Arial, Helvetica;
+        letter-spacing: 1px;
+    }
+}
+
+.link-basic{
+    &:hover{
+        color: $acento;
+    }
+}
+
+.close{
+    color: $white;
+    opacity: 1;
+}
+
+#btnSponsor{
+    width: 149px;
+    height: 157px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: url('../../images/mayan_sponsors.png') no-repeat top center;
+    text-indent: -99999px;
+    z-index: 11;
+    margin-top: -79px;
+    @include bp-medium {
+       display: none;
+    }
+}
+
+
+#btnSponsorMobile{
+    width: 149px;
+    height: 40px;
+    position: relative;
+    background: url('../../images/mayan_sponsors_mobile.png') no-repeat top center;
+    text-indent: -99999px;
+    z-index: 11;
+    display: none;
+    @include bp-medium{
+        display: block;
+        float: right;
+    }
+    @include bp-small {
+       display: block;
+       margin: 0 auto;
+       float: none;
+    }
+}
+
+/*
+#btn-logout{
+   background: $acento;
+   font-size: 12px;
+   @include bp-small {
+    font-size: 10px;
+   }
+}
+*/
+
+#btn-logout{
+   background: $acento;
+   font-size: 12px;
+   border: 0;
+   border-radius: 3px;
+   font-weight: bold;
+   text-transform: uppercase;
+   position: absolute;
+   left: 100px;
+   bottom: 0px;
+   z-index: 55;
+   @include bp-small {
+    font-size: 10px;
+   }
+}
+
