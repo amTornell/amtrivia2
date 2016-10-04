@@ -3,9 +3,13 @@ form{
     fieldset{
 
     }
-    input[type="text"], input[type="email"], select, option{
+    input[type="text"], input[type="email"]{
         width: 100%;
-        color: $blue-dark;
+        color: $white;
+        border-radius: 4px;
+        background: $blue-medium;
+        border: 0;
+        padding: 5px;
     }
     label{
         width: 100%;
@@ -22,93 +26,28 @@ form{
 
 }
 
-#registro{
-    .avatar{
-        margin: 50px auto 0;
-        width: 150px;
-        display: block;
-        border-radius: 50%;
-        height: 150px;
-        overflow: hidden;
-        img{
-            width: 100%;
-        }
-    }
-}
-
-#choose-activities{
-    .activity-info{
-        min-height: 30px;
-        padding: 20px;
-      
-        &:hover{
-            cursor: pointer;
-        }
-        font-family: $font-thin;
-        span{
-        margin-top: 20px;
-        display: block;
-      }
-    }
-    .selected{
-        background: $acento;
-        @include transition(color .5s ease);
-    }
-    picture{
-      width: 50px;
-      height: 50px;
-      overflow: hidden;
-      border-radius: 50%;
-      display: block;
-      margin: 10px;
-      float: left;
-      border: 2px solid $acento;
-      //box-shadow: 1px 3px 2px #2C1307;
-      img{
-        width: 100%;
-      }
-    }
-    .activity-item{
-      float: left;
-      margin-top: 25px;
-    }
-    .col-sm-6{
-      display: table;
-    }
-
-}
-#choose-influencer{
-    .mini-influencer{
-        background: none;
-        border: 0;
-        padding: 20px;
-        width: 100%;
-        @include transition(color .5s ease);
-        picture{
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 10px;
-            overflow: hidden;
-            border-radius: 50%;
-            display: block;
-            img{
-                width: 100%;
-            }
-        }
-    }
-    h2{
-        font-size: 16px;
-        text-align: center;
-    }
-    .selected{
-        background: $acento;
-        @include transition(color .5s ease);
-    }
-    
-    
+#preregistro{
+  input{
+    margin: 10px 0 ;
+    padding: 5px 10px;
+  }
 }
 
 
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $white;
+  opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $white;opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $white;opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $white;opacity: 1;
+}
 
 /***********
             Validaciones

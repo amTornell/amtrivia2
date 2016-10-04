@@ -27,63 +27,45 @@
         });
     }
 
-    if( $('#choose-influencer').length ){
-        $('.mini-influencer').click(function(e){
-            e.preventDefault();
-            $('.mini-influencer').removeClass('selected');
-            //$('')
-            if ($(this).hasClass('selected')) {
-                    $(this).removeClass('selected');
-                    //Insert logic if you want a type of optional click/off click code
-                } 
-            else
-                {
-                    $(this).addClass('selected');
-                    //Insert event handling logic
-                }
-        });
+    if( $('#trivia').length ){
+     $('.trivia-instruction').modal('show');
     }
+    // al cerrar el modal de las instrucciones de la trivia, disparamos el countdown
+    $('.trivia-instruction').on('hidden.bs.modal', function () {
+        // countdown();
+    })
 
 
-    if($('#choose-activities').length){
-        $("input[type=checkbox].activity-item").click(function() {
-            var bol = $("input[type=checkbox].activity-item:checked").length >= 5;   
-            //    $("input[type=checkbox][name=activity]").not(":checked").attr("disabled",bol);  
-            $("input[type=checkbox].activity-item").not(":checked").attr("disabled",bol);
-        });
-        $(".activity-item").change(function() {
-            if(this.checked) {
-                //Do stuff
-                console.log('hola change checkbox');
-                $(this).parent('.activity-info').addClass('selected');
-            }else{
-                $(this).parent('.activity-info').removeClass('selected');
+
+    /*
+    30 segundos para contestar cada pregunta
+    */  
+    function countdown(){
+
+      var counter = 20;
+      setInterval(function() {
+        counter--;
+        if (counter >= 0) {
+          span = document.getElementById("count");
+          span.innerHTML = counter;
+            if (counter <= 10) {
+              span = document.getElementById("count");
+              span.innerHTML = counter;
+              $("#count").addClass("red");
             }
-        });
-    }
-
-
-
-
-    /* daniela scripts */
-    $('.mini-influencer').click(function(){
-    $('select.youtuber option[value=1],select.youtuber option[value=2],select.youtuber option[value=3],select.youtuber option[value=4]').removeAttr('selected');
-    var influencer = $(this).val();
-        if(influencer == 1){
-            $('select.youtuber option[value=1]').attr('selected', 'selected');
-        }else if(influencer ==2){
-            $('select.youtuber option[value=2]').attr('selected', 'selected');
-        }else if(influencer == 3){
-            $('select.youtuber option[value=3]').attr('selected', 'selected');
-        }else{
-            $('select.youtuber option[value=4]').attr('selected', 'selected');
+      
         }
-    });
-    if( $('form').length ){
-          $('form').parsley();
-          $(".alert .alert-danger").delay(4000).hide(1500);
-          $(".alert .alert-success").delay(4000).hide(1500);
+
+        // Display 'counter' wherever you want to display it.
+        if (counter === 0) {
+            alert('aqui lanzamos la siguiente pregunta');
+            clearInterval(counter);
+        }
+      }, 1000);
     }
+
+
+
 
 
 })();
@@ -91,4 +73,3 @@
 
 
 
-//**************      / agregar fonts    **************

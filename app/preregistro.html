@@ -4,95 +4,78 @@
     <meta charset="utf-8"><!-- utf-8 works for most cases -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Nombre de campaña</title>
+    <title>Simulador Pre-registro</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
-       <link rel="shortcut icon" type="image/x-icon" href="http://vuela.aeromexico.com/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="http://vuela.aeromexico.com/favicon.ico">
 </head>
 <body>
 
-  <div class="leaf leaf-left">
-    <img src="../images/hojas-left.png" alt="hojas">
-  </div>
-  <div class="leaf leaf-right">
-    <img src="../images/mayan_planta02.png" alt="hojas">
-  </div>
+
  <a id="btnSponsor" data-toggle="modal" data-target="#ourSponsors">our sponsors</a>
 
   <div id="the-wrapper">
     <header id="mainHeader">
       <!-- menu desktop -->
-      <nav id="nav-main" class="menu">
-        <ul>
-          <li><a href="">Mecánica</a></li>
-          <li><a href="">Premios</a></li>
-          <li class="logo"><a href=""><img src="../images/mayan_logo.png" alt="mayan challenge"></a></li>
-          <li><a href="">Youtubers</a></li>
-          <li><a href="">Actividades</a></li>
-        </ul>
-      </nav>
-      <!-- /menu desktop -->
-      <!-- menu mobile -->
-      <div id="nav-trigger">
-          <span>Menu</span>
-      </div>
-      <nav id="nav-mobile">
-        <ul>
-          <li><a href="">Mecánica</a></li>
-          <li><a href="">Premios</a></li>
-          <li><a href="">Youtubers</a></li>
-          <li><a href="">Actividades</a></li>
-        </ul>
-      </nav>
-      <!-- / menu mobile -->
-      <div class="user">
-        <button onclick="window.location.href='logout'"  id="btn-logout"><span>Logout</span></button>
+       <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" /></a>
+     
 
-        <a href="">
-          <p><span class="avatar">
-            <img src="https://placeimg.com/100/150/people"></span> 
-             <span class="points">1500</span>
-          </p>
-          <!--<p class="user-points-content">  
-           
-          </p>-->
-          <!--<p class="username">Nombre de usuario que puede ser largo</p>-->
-        </a>
-       <!-- <a class="btn-main glyphicon glyphicon-menu-right" data-toggle="modal" data-target="#ourSponsors" ><span>Our sponsors</span></a>-->
-
-      </div>
-       <a id="btnSponsorMobile" data-toggle="modal" data-target="#ourSponsors">our sponsors</a>
     </header>
     <!-- dynamic -->
     <div class="container-center">
       <div class="row animated fadeInUp">
         <div class="col-md-6 item-centered">
            <h1 class="main-title text-centered">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Gana una experiencia de vuelo a bordo de nuestro simulador Boeing 787
           </h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eos animi eum, rerum unde maiores sapiente cupiditate nam deserunt! Quisquam nobis, facere dolore maxime, reiciendis laborum dolorum rerum autem voluptatem.</p>
-          <p class="text-centered"><a href="" class="btn-main glyphicon glyphicon-menu-right"><span>Participar</span></a></p>
+          <hr>
+          <p class="text-centered">Regístrate y sé de los primeros en participar</p>
         </div>
-      </div>
+      </div><!-- row-->
+      <img src="../images/simulador_home.png" alt="simulador" class="responsive-image animated fadeInUp super-image">
+      <div class="row animated fadeInUp">
+        <div class="col-md-6 item-centered"> 
+          <div id="preregistro" class="row ">
+              <form action="">
+                <fieldset>
+                    <div class="col-sm-10 item-centered">
+                      <div class="col-sm-12">
+                          <label class="hide">Nombre completo</label>
+                          <input type="text" placeholder="Nombre" required>
+                      </div>
+                      <div class="col-sm-12">
+                          <label class="hide">Email</label>
+                          <input id="fbMail" type="email" placeholder="Email" required>
+                      </div>
+        
+                      <div class="col-sm-12">
+                          <label class="small">
+                              <input type="checkbox"> Acepto los <a href="#" data-toggle="modal" data-target="#terminos">términos y condiciones</a>
+                          </label>
+                      </div>
+                      <p class="text-centered">
+                        <button class="btn-main glyphicon glyphicon-menu-right"><span>Enviar solicitud</span></button>
+                      </p>
+                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#preregistroSuccess">
+                        Launch demo modal
+                      </button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+        </div>
+
+      </div><!-- row-->
     </div>
+
     <!-- footer -->
     <footer id="mainFooter">
       <div class="row">
         <div class="col-md-12">
-          <img class="logo-deltaAm" src="../images/delta-am-01.png" alt="logo delta aeromexico">
-          
           <div class="footer-info">           
-            <ul>
-            <li class="col-xs-6">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-            <li class="col-xs-6">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-          </ul>
-            <p>&copy; 2016 Aeroméxico. All rights reserved. View <a data-target="#terms" data-toggle="modal" href="#">Terms and Conditions.</a>.  Consult <a target="_blank" href="https://aeromexico.com/en/travel-with-aeromexico/preparing-your-trip/regulations-and-policies/privacy-policy/?site=us">Privacy Police.</a></p>
+            <p>&copy; 2016 Aeroméxico. Todos los derechos reservados. Consulta nuestro <a target="_blank" href="https://aeromexico.com/es/viaja-con-aeromexico/preparando-tu-viaje/reglamentos-y-politicas/aviso-de-privacidad/?site=mx">aviso de privacidad</a></p>
           </div>
         </div>
       </div>
@@ -101,44 +84,24 @@
   </div><!-- #the-wrapper -->
 
 
- <!-- modal sponsors-->
-  <div class="modal fade" id="ourSponsors" tabindex="-1" role="dialog" aria-labelledby="ourSponsors">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Our sponsors</h4>
-        </div>
-        <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis voluptates consequatur molestias deleniti amet debitis, sapiente sunt, voluptatibus culpa reiciendis at eius neque tempore dolorum earum totam maxime ipsum error.</p>
-          <ul>
-            <li class="col-xs-4">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-            <li class="col-xs-4">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-            <li class="col-xs-4">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-            <li class="col-xs-4">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-            <li class="col-xs-4">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-            <li class="col-xs-4">
-              <a href=""><img src="https://placeimg.com/200/150/any"></a>
-            </li>
-          </ul>
-        </div>
-        
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-  <!-- / modal sponsors-->
+
+<!-- modal success -->
+<div class="modal fade" id="preregistroSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Simulador 2.0</h4>
+      </div>
+      <div class="modal-body text-centered">
+        <h2>¡Felicidades! Serás de los primeros en recibir información</h2>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- / modal success-->
   <!-- modal T&C -->
-  <div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="terms">
+  <div class="modal fade" id="terminos" tabindex="-1" role="dialog" aria-labelledby="terms">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
