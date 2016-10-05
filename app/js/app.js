@@ -28,7 +28,7 @@
     }
 
     if( $('#trivia').length ){
-     $('.trivia-instruction').modal('show');
+     //$('.trivia-instruction').modal('show');
     }
     // al cerrar el modal de las instrucciones de la trivia, disparamos el countdown
     $('.trivia-instruction').on('hidden.bs.modal', function () {

@@ -58,6 +58,7 @@ header{
 	width: 100%;
 	position: relative;
 	min-height: 100px;
+	background: url('../../images/simulador_menu01.png') no-repeat top center;
 	 @include bp-small {
     }
 }
@@ -66,27 +67,32 @@ small{
 	font-size: 70%;
 }
 .menu{
-	height: 77px;
+	height: 76px;
 	margin: 0 auto;
-	width: 842px;
+	width: 100%;
 	position: relative;
+  	background-image:url('../../images/simulador_menu02.png');
+  	background-repeat: no-repeat;
+  	background-position:  bottom center;
 	ul{
 		position: relative;
-		width: 100%;
+		width: 700px;
 		display: block;
 		background:url('../../images/mayan_menu.png') no-repeat center top;
-		height: 77px;
-		margin-top: 70px;
+		height: 40px;
+		margin: 30px auto 0;
 	}
 	li{
 		display: block;
 		float: left;
-		width: 140px;
+		width: 25%;
+		height: 40px;
+		line-height: 35px;
 		a{
 			display: block;
-			height: 77px;
+			
 			width: 100%;
-			line-height: 62px;
+			line-height: 35px;
 			text-align: center;
 			font-family: $font-regular;
 			text-shadow: 1px 1px 1px $cafe;
@@ -94,6 +100,15 @@ small{
 				text-decoration: none;
 				color: $white;
 			}
+		}
+	}
+	li.profile{
+		span{
+			float: left;
+		}
+		a{
+			float: left;
+			width: 100px;
 		}
 	}
 	
