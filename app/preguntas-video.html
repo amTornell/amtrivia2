@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Simulador - Nombre de campaña</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://vuela.aeromexico.com/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div id="the-wrapper">
+        <header id="mainHeader">
+            <ul class="languages">
+                <li><a href="">EN</a> / </li>
+                <li class="active"><a href="">ES</a></li>
+            </ul>
+            <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" />
+            </a>
+            <!-- menu desktop -->
+            <nav id="nav-main" class="menu">
+                <ul>
+                    <li><a href="">Mecánica</a>
+                    </li>
+                    <li><a href="">Experiencias</a>
+                    </li>
+                    <li><a href="">Juega</a>
+                    </li>
+                    <li class="profile"><a href=""><span>Mi perfil<strong class="points"> / 110 pts</strong> </span></a> <a href="" class="logout">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /menu desktop -->
+            <!-- menu mobile -->
+            <div id="nav-trigger">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </div>
+            <nav id="nav-mobile">
+                <ul>
+                    <li><a href="">Mecánica</a>
+                    </li>
+                    <li><a href="">Experiencias</a>
+                    </li>
+                    <li><a href="">Juega</a>
+                    </li>
+                    <li>Mi perfil <a href="">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- / menu mobile -->
+
+        </header>
+        <!-- dynamic -->
+        <div class="container-center">
+            <div class="row ">
+                <h1 class="main-title text-centered">Juega</h1>
+                <br>
+
+                <nav>
+                    <ol class="cd-multi-steps text-top">
+                        <li class="current"><em>Aeroméxico</em>
+                        </li>
+                        <li class=""><em>Entretenimiento <br>a bordo</em>
+                        </li>
+                        <li class=""><em>787</em>
+                        </li>
+                        <li class=""><em>Simulador</em>
+                        </li>
+                        <li><em>Quetzalcoátl</em>
+                        </li>
+                    </ol>
+                </nav>
+
+
+                <div id="question-video" class="the-question ">
+                    <div id="video-question-content" class="hide">
+                        <div class="col-sm-5">
+                            <picture>
+                                <img src="../images/trivia-1.png" alt="trivia">
+
+                            </picture>
+                        </div>
+                        <!-- pregunta -->
+                        <div class="col-sm-7">
+                            <h3>
+                              <span><strong>03</strong> de 15 /</span>¿Durante qué mes acompañamos en #DetrásDeLaVisita al Papa Francisco ? 
+                            </h3>
+                             <!-- respuestas -->
+                            <ul class="answers">
+                                <li>
+                                    <div>
+                                        <input type="radio" id="radio01" name="radio" />
+                                        <label for="radio01"><span></span>Febrero</label>
+                                    </div>
+                                </li>
+                                <li class="wrong">
+                                    <div>
+                                        <input type="radio" id="radio02" name="radio" />
+                                        <label for="radio02"><span></span>Enero</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <input type="radio" id="radio03" name="radio" />
+                                        <label for="radio03"><span></span>Septiembre</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- /respuestas -->
+                            <!-- contador -->
+                            <p id="countDown"><span class="glyphicon glyphicon-time"></span> Tienes <span id="count">20</span> segundos</p>
+                            <!-- / contador -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <span class="clearfix"></span>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer id="mainFooter">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-info">
+                        <p>&copy; 2016 Aeroméxico. Todos los derechos reservados. Consulta nuestro <a target="_blank" href="https://aeromexico.com/es/viaja-con-aeromexico/preparando-tu-viaje/reglamentos-y-politicas/aviso-de-privacidad/?site=mx">aviso de privacidad</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- #the-wrapper -->
+
+
+    <!-- modal instrucciones trivia -->
+    <div class="modal fade video-content" tabindex="-1" role="dialog" aria-labelledby="videoContent" data-backdrop="static" data-keyboard="false" data-toggle="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <p class="text-centered video-instruction">¡Pon mucha atención! La respuesta está dentro del vídeo. </p><br>
+                <div class="embed-container">
+                    <video id="myVideo" autoplay>
+                        <source src="../video/simulador.mp4" type="video/mp4">
+                        <source src="../video/simulador.ogg" type="video/ogg">
+                        <source src="../video/simulador.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / modal instrucciones trivia -->
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

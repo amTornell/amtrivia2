@@ -1,137 +1,422 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8"><!-- utf-8 works for most cases -->
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Nombre de campaña</title>
-
-    
+    <title>Simulador - Nombre de campaña</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://vuela.aeromexico.com/favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body>
-  <div id="the-wrapper">
-    <header id="mainHeader">
-      <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" /></a>
-      <!-- menu desktop -->
-      <nav id="nav-main" class="menu">
-        <ul>
-          <li><a href="">Mecánica</a></li>
-          <li><a href="">Experiencias</a></li>
-          <li><a href="">Juega</a></li>
-          <li class="profile"><span>Mi perfil <strong class="points">110 pts</strong></span> <a href="">Logout</a></li>
-        </ul>
-      </nav>
-      <!-- /menu desktop -->
-      <!-- menu mobile -->
-      <div id="nav-trigger">
-          <span>Menu</span>
-      </div>
-      <nav id="nav-mobile">
-        <ul>
-          <li><a href="">Mecánica</a></li>
-          <li><a href="">Experiencias</a></li>
-          <li><a href="">Juega</a></li>
-          <li>Mi perfil <a href="">Logout</a></li>
-        </ul>
-      </nav>
-      <!-- / menu mobile -->
-      
-    </header>
-    <!-- dynamic -->
-    <div class="container-center">
-      <div id="trivia" class="row ">
-        <h1 class="main-title text-centered">Trivia</h1>
-        <div class="question-number">
-                  <p><span>06 </span>/ 10</p>
-        </div>
-        <p id="hello">Restan <span id="count">20</span> segundos</p>
-        <br>
-          <section>
-          <h2>8 - Dot Indicators</h2>
-
-          <nav>
-            <ol class="cd-multi-steps text-top">
-              <li class="visited"><em>Aeroméxico</em></li>
-              <li class="visited" ><em>Entretenimiento <br>a bordo</em></li>
-              <li class="visited" ><em>787</em></li>
-              <li class="current"><em>Simulador</em></li>
-              <li><em>Quetzalcoátl</em></li>
-            </ol>
-          </nav>
-        </section>
-
-
-          <div class="the-question">
-              <!-- pregunta -->
-              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.</h3>
-              <!-- respuestas -->
-              <picture>
-                
-              </picture>
-              <ul class="answers"> 
-                  <li> 
-                    <div>
-                      <input type="radio" id="radio01" name="radio" />
-                      <label for="radio01"><span></span>Radio Button 1</label>
-                    </div>
-                  </li> 
-                  <li> 
-                    <div>
-                      <input type="radio" id="radio02" name="radio" />
-                      <label for="radio02"><span></span>Radio Button 2</label>
-                    </div>
-                  </li> 
-                  <li> 
-                    <div>
-                      <input type="radio" id="radio03" name="radio" />
-                      <label for="radio03"><span></span>Radio Button 3</label>
-                    </div>
-                  </li> 
-                </ul> 
-                <!-- /respuestas -->
+    <div id="the-wrapper">
+        <header id="mainHeader">
+            <ul class="languages">
+                <li><a href="">EN</a> / </li>
+                <li class="active"><a href="">ES</a>
+                </li>
+            </ul>
+            <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" />
+            </a>
+            <!-- menu desktop -->
+            <nav id="nav-main" class="menu">
+                <ul>
+                    <li><a href="">Mecánica</a>
+                    </li>
+                    <li><a href="">Experiencias</a>
+                    </li>
+                    <li><a href="">Juega</a>
+                    </li>
+                    <li class="profile"><a href=""><span>Mi perfil<strong class="points"> / 110 pts</strong> </span></a> <a href="" class="logout">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /menu desktop -->
+            <!-- menu mobile -->
+            <div id="nav-trigger">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
             </div>
-       
-        <span class="clearfix"></span>
-      </div>
-    </div>
-    <!-- footer -->
-     <footer id="mainFooter">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer-info">           
-            <p>&copy; 2016 Aeroméxico. Todos los derechos reservados. Consulta nuestro <a target="_blank" href="https://aeromexico.com/es/viaja-con-aeromexico/preparando-tu-viaje/reglamentos-y-politicas/aviso-de-privacidad/?site=mx">aviso de privacidad</a></p>
-          </div>
+            <nav id="nav-mobile">
+                <ul>
+                    <li><a href="">Mecánica</a>
+                    </li>
+                    <li><a href="">Experiencias</a>
+                    </li>
+                    <li><a href="">Juega</a>
+                    </li>
+                    <li>Mi perfil <a href="">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- / menu mobile -->
+
+        </header>
+        <!-- dynamic -->
+        <div class="container-center">
+            <div id="trivia" class="row ">
+                <h1 class="main-title text-centered">Juega</h1>
+                <br>
+
+                <nav>
+                    <ol class="cd-multi-steps text-top">
+                        <li class="visited"><em>Aeroméxico</em>
+                        </li>
+                        <li class="visited"><em>Entretenimiento <br>a bordo</em>
+                        </li>
+                        <li class="visited"><em>787</em>
+                        </li>
+                        <li class="current"><em>Simulador</em>
+                        </li>
+                        <li><em>Quetzalcoátl</em>
+                        </li>
+                    </ol>
+                </nav>
+
+
+                <div class="the-question">
+                    <div class="col-sm-5">
+                        <picture>
+                            <img src="../images/trivia-1.png" alt="trivia">
+                        </picture>
+                    </div>
+                    <div class="col-sm-7">
+                        <!-- pregunta -->
+                        <h3><span><strong>06</strong> de 15 /</span>¿Cuál es el slogan de Aeroméxico?</h3>
+                        <!-- respuestas -->
+                        <ul class="answers">
+                            <li>
+                                <div>
+                                    <input type="radio" id="radio01" name="radio" />
+                                    <label for="radio01"><span></span> La línea que nos une</label>
+                                </div>
+                            </li>
+                            <li class="wrong">
+                                <div>
+                                    <input type="radio" id="radio02" name="radio" />
+                                    <label for="radio02"><span></span>Unidos en el cielo</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="radio" id="radio03" name="radio" />
+                                    <label for="radio03"><span></span>La línea de México</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- /respuestas -->
+                        <!-- contador -->
+                        <p id="countDown"><span class="glyphicon glyphicon-time"></span> Tienes <span id="count">20</span> segundos</p>
+                        <!-- / contador -->
+                    </div>
+
+                </div>
+
+                <span class="clearfix"></span>
+            </div>
         </div>
-      </div>
-    </footer>
+        <!-- footer -->
+        <footer id="mainFooter">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-info">
+                        <p>&copy; 2016 Aeroméxico. Todos los derechos reservados. <br><a href="" href="#" data-toggle="modal" data-target="#terminos">Términos y condiciones</a>. Consulta nuestro <a target="_blank" href="https://aeromexico.com/es/viaja-con-aeromexico/preparando-tu-viaje/reglamentos-y-politicas/aviso-de-privacidad/?site=mx">aviso de privacidad</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-  </div><!-- #the-wrapper -->
+    </div>
+    <!-- #the-wrapper -->
 
 
-  <!-- modal instrucciones trivia -->
-   <div class="modal fade trivia-instruction" tabindex="-1" role="dialog" aria-labelledby="trivia-instruction">
-    <div class="modal-dialog modal-sm">
+    <!-- modal instrucciones trivia -->
+    <div class="modal fade trivia-instruction" tabindex="-1" role="dialog" aria-labelledby="trivia-instruction">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <h1 class="main-title">Instrucciones de la trivia</h1>
+                <p>
+                  Tendrás 30 segundos para responder cada una de las 15 preguntas. En caso de que acabe el tiempo y no logres contestar, se tomará como respuesta incorrecta.
+                </p>
+                <br>
+                <p>¡Mucha suerte!</p>
+                <div class="modal-footer">
+                   <button class="btn btn-primary btn-main" data-dismiss="modal"><span>¡Entendido!</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / modal instrucciones trivia -->
+      <!-- modal T&C -->
+  <div class="modal fade" id="terminos" tabindex="-1" role="dialog" aria-labelledby="terms">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <h1>Instrucciones de la trivia</h1>
-        <p>A continuación deberás responder 10 preguntas, sólo tienes 30 segundos para contestar cada una. En caso de que el tiempo establecido terminé y no hayas contestado, se tomará como respuesta incorrecta.
-        </p>
-        <p>¡Mucha suerte!</p>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">¡Entendido!</button>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Simulador: una experiencia de vuelo</h4>
+        </div>
+        <div class="modal-body modal-terminos-txt">
+<p><strong>Simulador: una experiencia de vuelo </strong></p>
+
+<p>Aeroméxico te invita a vivir una experiencia inolvidable: participa demostrando tus conocimiento de Aeroméxico y gana una experiencia única a bordo de nuestro Simulador de vuelo Dreamliner 787-9.</p>
+
+<p>1. DESBLOQUEA todos los niveles respondiendo correctamente a las preguntas 2. INVITA a todos tus amigos y acumula puntos con cada registro completado<br />
+3. GANA un pase doble para volar nuestro Simulador Dreamliner 787-9.</p>
+
+<p>Vigencia del 24 al 30 de octubre del 2016.</p>
+
+<p>Consulta términos y condiciones en http://www.vuela.aeromexico.com/experienciadevuelo/</p>
+
+<p><strong>Premio:</strong><strong> </strong><br />
+GANA una experiencia de vuelo en nuestro Simulador Dreamliner 787-9 dirigida por un piloto.</p>
+
+<p>*Incluye vuelo hacia y desde la Ciudad de México con hospedaje de una noche para los ganadores y acompañante en caso de requerir.</p>
+
+<p><strong>Condiciones: </strong></p>
+
+<ul style="list-style-type:none">
+  <li>
+  <p>● &nbsp;Participan mayores de 18 años.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Sólo podrán participar personas dentro de la República Mexicana.</p>
+  </li>
+  <li>
+  <p>● &nbsp;El concurso se llevará a cabo del 24 al 30 de octubre del 2016 a las 23:59 horas CDT</p>
+
+  <p>Ciudad de México.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Para validar la participación de los concursantes es necesario que sigan a Aeroméxico</p>
+
+  <p>en Facebook (https://www.facebook.com/Aeromexico) y en Twitter (https://twitter.com/</p>
+
+  <p>aeromexico).</p>
+  </li>
+  <li>
+  <p>● &nbsp;En caso de resultar ganador, se le pedirá un correo electrónico de contacto y los</p>
+
+  <p>testigos de que nos sigue en las redes sociales antes mencionadas.</p>
+  </li>
+  <li>
+  <p>● &nbsp;El ganador deberá enviar testigos de que sigue las cuentas mencionadas, de no ser así,</p>
+
+  <p>el premio se otorgará al segundo lugar.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Al participar en el concurso los usuarios aceptan los Términos y Condiciones.</p>
+  </li>
+  <li>
+  <p>● &nbsp;El participante deberá contestar correctamente a cada pregunta, de no hacerlo tendrá</p>
+
+  <p>oportunidad de intentarlo dos veces más.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Al contestar correctamente en el primer intento el participante obtiene 5 puntos.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Al contestar correctamente en el segundo intento el participante obtiene 3 puntos.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Al contestar correctamente en el tercer intento el participante obtiene 1 punto.</p>
+  </li>
+</ul>
+
+<ul style="list-style-type:none">
+  <li>
+  <p>● &nbsp;Al concluir el nivel dos el participante deberá compartir su liga para poder desbloquear el siguiente nivel.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Cada registro completado por medio de la liga del participante, generará 10 puntos.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Al concluir el nivel cuatro, el participante deberá compartir su liga y obtener cinco</p>
+
+  <p>registros completados para desbloquear el siguiente nivel.</p>
+  </li>
+  <li>
+  <p>● &nbsp;El participante tendrá hasta las 23: 59 horas CDT Ciudad de México para contestar la</p>
+
+  <p>trivia y compartir la liga.</p>
+  </li>
+  <li>
+  <p>● &nbsp;El ganador se definirá acorde al puntaje obtenido al realizar la dinámica. En caso de que</p>
+
+  <p>dos usuarios tengan la misma cantidad de puntos en el ranking, ganará aquel que haya</p>
+
+  <p>realizado primero su registro en el concurso.</p>
+  </li>
+  <li>
+  <p>● &nbsp;La puntuación no será revelada hasta el final de la dinámica, donde se mostrarán el top</p>
+
+  <p>10 de puntuación.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Para poder contabilizar los puntos de sus contactos registrados, el usuario deberá</p>
+
+  <p>finalizar la trivia, es decir, contestar todas las preguntas.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Sólo habrá un ganador y podrá ir con un acompañante.</p>
+  </li>
+  <li>
+  <p>● &nbsp;El ganador asistirá a la experiencia en el simulador de vuelo con un acompañante</p>
+
+  <p>mayor de 18 años de edad.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Los ganadores y sus acompañantes deberán contar con identificación oficial vigente.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Los ganadores se comprometen a respetar los lineamientos de acceso y uso del</p>
+
+  <p>simulador de vuelo.</p>
+  </li>
+  <li>
+  <p>● &nbsp;En caso de que alguno de los ganadores no cumpla con los requerimientos o no envíe</p>
+
+  <p>la información solicitada en 24 horas, se designará como ganador al siguiente</p>
+
+  <p>participante que sí cumpla con estos Términos y Condiciones.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Los ganadores serán anunciados el 31 de octubre del 2016 en http://</p>
+
+  <p>www.vuela.aeromexico.com/experienciadevuelo/</p>
+  </li>
+  <li>
+  <p>● &nbsp;No podrán ganar si han resultado ganadores en alguna otra promoción de Aeroméxico</p>
+
+  <p>en cualquiera de las redes sociales durante 2016, o en un período menor a 12 meses a</p>
+
+  <p>partir de la fecha de publicación de la dinámica.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Los ganadores deberán compartir fotografías de su experiencia vía el correo electrónico</p>
+
+  <p>que se le indique cediendo sus derechos a Aeroméxico para poderlas compartir en sus</p>
+
+  <p>distintos canales de comunicación.</p>
+  </li>
+  <li>
+  <p>● &nbsp;La experiencia en el simulador de vuelo se hará con previa confirmación de acuerdo con</p>
+
+  <p>la disponibilidad del simulador, tentativamente en enero de 2017.</p>
+  </li>
+  <li>
+  <p>● &nbsp;La experiencia en el simulador de vuelo será de una hora. El horario y día estará sujeto</p>
+
+  <p>en función de la disponibilidad del simulador y se confirmará previamente con el</p>
+
+  <p>ganador.</p>
+  </li>
+  <li>
+  <p>● &nbsp;En caso de que el ganador deba trasladarse de su lugar de origen a la Ciudad de</p>
+
+  <p>México, se le proporcionará transportación aérea y hospedaje.</p>
+  </li>
+</ul>
+
+<ul style="list-style-type:none">
+  <li>
+  <p>● &nbsp;En caso de que el ganador y su acompañante no se presente a tiempo para realizar su check in, el viaje quedará cancelado.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Aeroméxico no se hace responsable de los servicios prestados por terceros.</p>
+  </li>
+  <li>
+  <p>● &nbsp;No incluye transportación terrestre, ni alimentos/bebidas.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Este vuelo no acumula KmP, no puede ser reembolsado, cambiado o transferido.</p>
+
+  <p><em>Aplica para residentes legales de los 31 estados de los Estados Unidos Mexicanos y el Distrito Federal con 18 años de edad cumplidos al momento de participar. </em></p>
+
+  <p><strong>Legislación aplicable a las redes sociales Aeroméxico: </strong></p>
+
+  <p>Las actividades de las redes sociales de Aeroméxico se rigen por la legislación vigente en México y por los presentes Términos y Condiciones.</p>
+
+  <p><em>MODIFICACIONES Y/O ANEXOS: Aeroméxico se reserva el derecho a realizar modificaciones o añadir anexos sucesivos sobre las mecánicas y los premios que se deriven de las mismas, siempre que dichos cambios estén justificados, no perjudiquen a los participantes, y se comuniquen a éstos debidamente. </em></p>
+
+  <p><strong>Identificación: </strong></p>
+
+  <p>La identidad de los participantes y ganadores, así como su condición de residentes en México, se acreditará exclusivamente por medio de documentos oficiales (Credencial de Elector, Pasaporte, Cartilla Militar) y deberán estar vigentes.</p>
+
+  <p><strong>Participación a través de internet: </strong></p>
+  </li>
+</ul>
+
+<ul style="list-style-type:none">
+  <li>
+  <p>● &nbsp;Aeroméxico excluye cualquier responsabilidad de daños y perjuicios de toda naturaleza que puedan deberse a la falta temporal de disponibilidad o de continuidad del funcionamiento de la página de internet o servicio telefónico, mediante el cual se participa en la promoción; a la defraudación de la utilidad de los usuarios hubieren podido atribuir al mismo, y en particular, aunque no de modo exclusivo, a los fallos en el acceso a las distintas páginas, y envíos de respuestas de participación a través de internet.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Si por algún motivo el ganador siendo debidamente informado no pudiera recoger el premio dentro del plazo indicado, se considerará como abandonado.</p>
+
+  <p><strong>Uso de nombre / ganadores e imagen: </strong></p>
+
+  <p>Los participantes, consienten automáticamente al aceptar los presentes Términos y Condiciones y participar en la presente, la utilización, publicación y reproducción en todo el mundo y sin limitación, por parte de Aeroméxico o de cualquiera de sus subsidiarias o empresas afiliadas, de su imagen y nombre en cualquier tipo de publicidad, promoción, publicación, incluido internet, o cualquier otro medio de la naturaleza que sea, con fines</p>
+  </li>
+</ul>
+
+<p>comerciales o informativos siempre que éstos se relacionen con la presente promoción, sin pago o reembolso de ningún tipo para el participante y sin necesidad de pagar ninguna tarifa.</p>
+
+<p><strong>Derecho de eliminación / participaciones fraudulentas: </strong></p>
+
+<p>Aeroméxico se reserva el derecho de eliminar justificadamente a cualquier usuario que defraude, altere o inutilice el buen funcionamiento y el transcurso normal y reglamentario de la presente promoción. Aeroméxico pretende que todos los usuarios concursen en igualdad de condiciones en cada una de las promociones y con estricto respeto a las normas de la buena fe. Por ello, cualquier utilización abusiva o fraudulenta de estos Términos y Condiciones, dará lugar a la anulación de los códigos utilizados y/o acumulados y a la consiguiente descalificación y anulación del usuario y cualquier promoción que realice en la página.</p>
+
+<p>De este modo se entenderá que se produce fraude, cuando:</p>
+
+<ul style="list-style-type:none">
+  <li>
+  <p>● &nbsp;Varias personas participan con la misma cuenta.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Una sola persona participe con diferentes cuentas.</p>
+  </li>
+  <li>
+  <p>● &nbsp;El usuario proporcione datos falsos o incompletos.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Reproducir o alterar la información o la publicación dada en el concurso.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Se use o desarrolle cualquier tipo de programa informático que facilite la introducción/</p>
+
+  <p>validación de información, datos, códigos, etc., o la participación automatizada en actividades de la página o cualquier intento, abuso o acto de mala fe en el que se aproveche de la promoción o se ponga a sí mismo en situación privilegiada, así como cualquier otra actividad que altere la competencia justa por los premios.</p>
+  </li>
+  <li>
+  <p>● &nbsp;Aeroméxico promueve la competencia sana y rechaza los ataques relacionados a la no competencia.</p>
+  </li>
+  <li>
+  <p>● &nbsp;No aplica para empleados de Aeroméxico, ni empresas relacionadas con la misma.</p>
+
+  <p><strong>Aceptación de los presentes Términos y Condiciones: </strong></p>
+
+  <p>La participación en las promociones de los sitios supone la aceptación de los presentes Términos y Condiciones de la presente promoción, así como la Política de Privacidad.</p>
+  </li>
+</ul>
+
+
         </div>
       </div>
     </div>
   </div>
-  <!-- / modal instrucciones trivia -->
-  <!-- scripts -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-  <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/app.js"></script>
+   <!-- / modal T&C -->
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

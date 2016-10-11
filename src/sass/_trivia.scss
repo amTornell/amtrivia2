@@ -1,0 +1,123 @@
+.the-question{
+  padding: 50px 0 20px;  
+  h3{
+    font-family: $font-thin;
+    font-size: 20px;
+    padding: 0 0 20px;
+  }
+  
+  @include bp-small{
+      padding: 10px 0;
+  }
+  picture{
+    width: 100%;
+    text-align: center;
+    img{
+      width: 100%;
+      max-width: 250px;
+      display: block;
+      margin: 0 auto;
+      float: right;
+    }
+    @include bp-small{
+      display: none;
+    }
+  }
+
+}
+
+.question-number{
+    font-size: 120%;
+    span{
+      color: $acento;
+    }
+    
+  }
+
+.answers{
+  padding: 10px 20px;
+  text-align: left;
+  li{
+    margin: 0px; 
+    padding: 0px 0px 15px ; 
+    list-style: none; 
+  }
+
+  label{
+    cursor: pointer;
+  }
+  input[type="radio"] {
+      display:none;
+  }
+  input[type="radio"] + label {
+  
+  }
+  input[type="radio"] + label span {
+      display:inline-block;
+      width:19px;
+      height:19px;
+      margin:-1px 10px 0 0;
+      vertical-align:middle;
+      cursor:pointer;
+      -moz-border-radius:  50%;
+      border-radius:  50%;
+  }
+
+  input[type="radio"] + label span {
+    background: rgba(237, 239, 240, 0.7);
+    -webkit-box-shadow:inset 1px 1px 1px 1px rgba(5,32,42,0.7);
+    box-shadow:inset 1px 1px 1px 1px rgba(5,32,42,0.7);
+    border-radius: 5px;
+  }
+
+  input[type="radio"]:checked + label span{
+       background-color:$acento;
+  }
+
+  input[type="radio"] + label span,
+  input[type="radio"]:checked + label span {
+    -webkit-transition:background-color 0.4s linear;
+    -o-transition:background-color 0.4s linear;
+    -moz-transition:background-color 0.4s linear;
+    transition:background-color 0.4s linear;
+  }
+  .wrong{
+    opacity: 0.7;
+    label:hover{
+      cursor: not-allowed;
+    }
+    label{
+       text-decoration: line-through;
+    }
+  }
+}
+
+.red{
+  color: $red;
+}
+#countDown{
+  font-family: $font-thin;
+  font-size: 13px;
+  margin: 20px ;
+  padding: 5px 0 ;
+  width: 135px;
+  border-top: 1px solid $white;
+  #count{
+    font-family: $font-medium;
+  }
+}
+.video-instruction{
+  font-size: 18px;
+  padding: 20px 0 10px;
+}
+.trivia-instruction{
+  .modal-content{
+    padding: 20px;
+  }
+  .modal-dialog{
+    padding: 20px;
+  }
+  .modal-footer{
+    margin-top: 20px;
+  }
+}

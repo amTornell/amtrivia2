@@ -19,8 +19,14 @@ html {
 a{
 	text-decoration: none;
 	color: $white;
+	&:hover{
+		color: $acento;
+	}
 }
 
+.left{
+	float: left;
+}
 .contenedor-center {
   /*  display:flex;
     flex-direction: column;
@@ -58,8 +64,40 @@ header{
 	width: 100%;
 	position: relative;
 	min-height: 100px;
+	margin-top: 20px;
 	background: url('../../images/simulador_menu01.png') no-repeat top center;
-	 @include bp-small {
+	@include bp-small {
+		margin-top: 5px; 
+		background-size: 200% auto;
+		background-position: center 50px;
+    }
+    .languages{
+    	width: 80px;
+    	position: absolute;
+    	top: 1px;
+    	right: 2px;
+    	li{
+    		display: inline-block;
+    		border-top: 3px solid $blue-dark;
+    		font-size: 18px;
+    		a{
+    			font-family: $font-thin;
+    			&:hover{
+    				text-decoration: none;
+    			}
+    		}
+    	}
+    	li.active{
+			border-color: $acento;
+    	}
+    	@include bp-small {
+    		position: relative;
+    		margin: 0 auto;
+    		width: 66px;
+    		li{
+    			font-size: 13px;
+    		}
+   		}
     }
 }
 
@@ -90,7 +128,6 @@ small{
 		line-height: 35px;
 		a{
 			display: block;
-			
 			width: 100%;
 			line-height: 35px;
 			text-align: center;
@@ -105,17 +142,33 @@ small{
 	li.profile{
 		span{
 			float: left;
+			.points{
+				font-family: $font-thin;
+				color: $acento;
+			}
 		}
 		a{
 			float: left;
-			width: 100px;
+			width: 100%;
+		}
+		.logout{
+			text-transform: uppercase;
+			font-size: 11px;
+			background: $acento;
+			border: 3px;
+			padding: 0px 5px;
+			height: 20px;
+			line-height: 20px;
+			width: 70px;
+			text-shadow: none;
+			font-family: $font-medium;
 		}
 	}
 	
 }
 .logo{
 		position: relative;
-		margin: 40px auto 0;
+		margin: 0px auto 0;
 		display: block;
 		max-width:400px;
 		img{
@@ -123,8 +176,13 @@ small{
 			margin: 0 auto;
 			max-width: 100%;
 		}
+		@media screen and (min-width:300px) and (max-width: 800px){
+		 max-width:290px;
+		}
+
 		 @include bp-small {
-		 	width: 300px;
+		 //	width: 300px;
+		 //	padding-top: 10px;
 		 }
 }
 
@@ -141,70 +199,45 @@ small{
   margin-top: 5px;
   float: left;	
   position: relative;
-  z-index: 20;		
+  z-index: 20;	
+
+
 	span {
 	    display: block;
-	    background-color: none;
-
+	    background-color: none;		
 	    color: white;
 	    cursor: pointer;
 	    text-transform: uppercase;
 	    clear: both;
-	    width: 300px;
-	    margin: 0 auto;
-	    min-height: 120px;
-	    text-indent: -99999px;
-	   	/*
-	   	font-size: 11px;
-	   	padding: 5px 10px;
+	    margin: 0;
+	    margin-left: 5px;
+	   	font-size: 18px;
 		letter-spacing: 1px;
-		border: 2px solid $acent;
-	    border-radius: 20px;
-		
-		line-height: 22px;
-		*/
-		background: url(../../images/mayan_logo.png) no-repeat top center;
-		background-size: 150px auto;
+		border: 3px solid $white;
+	    border-radius: 50%;
+		width: 45px;
+  		height: 45px;
+		line-height: 40px;
+	
 		&:hover {
       	//background-color:  $blue-dark; 
       	}
-      	@include bp-small{
-      		background-position: 10px 0;
-      	}
+      
       	
 	  }
-	  span:after {
-    /*  display: inline-block;
-      margin-left: 10px;
-      width: 20px;
-      height: 10px;
-      content: "";
-      border-left: solid 10px transparent;
-      border-top: solid 10px $acent;
-      border-right: solid 10px transparent; 
-      */
+	span:after {
+	
   	}
   	span.open:after {
-    /*  border-left: solid 10px transparent;
-      border-top: none;
-      border-bottom: solid 10px $acent;
-      border-right: solid 10px transparent; 
-      */
+
   	}
-  	@include bp-small {
-   			width: 100%;
-   			float: none;
-   			span{
-   				width: 100%;
-   			}
-  	}
+
 }
  
 nav#nav-mobile {
   position: relative;
   display: none; 
   clear: both;
-  background: url('../../images/mayan_logo_mobile.png') no-repeat top left / 100% auto;
   z-index: 10;
   width: 300px;
   top: -22px;
@@ -225,8 +258,8 @@ nav#nav-mobile {
 			    display: block;
 			    padding: 2px 0;
 			    margin: 0 2px;
-			    border-bottom: solid 1px $cafe;
-			    border-top: solid 1px $yellow;
+			    border-bottom: solid 1px $acento;
+			    border-top: solid 1px $blue-medium;
 		}
 		li:first-child{
 			border-top: none;
@@ -234,7 +267,7 @@ nav#nav-mobile {
 		li:last-child {
 	    	  border-bottom: none; 
 	    }
-	       a {
+	     a {
 		    display: block;
 		    color: $white;
 		    padding: 5px; 
@@ -355,9 +388,11 @@ user
 
 .container-center{
 	margin: 0 auto;
-	padding-bottom: 300px;
+	padding-bottom: 420px;
 	background: $blue-dark url('../../images/simulador_footer.png') no-repeat bottom center / 100% auto ; 
-
+	@include bp-small{
+    padding-bottom: 180px;
+    }
 
 }
 
@@ -438,6 +473,18 @@ h4{
 .modal-backdrop.in {
 //	opacity: 0.9;
 }
+.modal-terminos-txt{
+	ul{
+		padding-left: 25px;
+	}
+	p{
+		padding-bottom: 7px;
+		strong{
+			font-family: $font-medium;
+		}
+	}
+
+}
 /*****************************
 
 		Sponsors
@@ -509,6 +556,7 @@ h4{
 	line-height: 120%;
 	width: 500px;
 	margin: 0 auto;
+	text-align: center;
 	a{
 		text-decoration: underline;
 	}
@@ -529,29 +577,23 @@ h4{
 
 ******************************/
 
-.leaf{
-	position: absolute;
-	z-index: 2;
-	position: fixed;
-	img{
-		width: 70%;
-		max-width: 70%;
-		@include bp-small {
-    		width: 100%;
-    		max-width: 100%;
-    	}
-	}
+.hide{
+	display: none;
+
 }
 
-.leaf-left{
-	left: 0;
-	bottom: 0;
-}
 
-.leaf-right{
-	right: 0;
-	bottom: 0;
-	img{
-		float: right;
-	}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  iframe, object, embed, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -28,14 +28,23 @@
     }
 
     if( $('#trivia').length ){
-     //$('.trivia-instruction').modal('show');
+     $('.trivia-instruction').modal('show');
     }
     // al cerrar el modal de las instrucciones de la trivia, disparamos el countdown
     $('.trivia-instruction').on('hidden.bs.modal', function () {
-        // countdown();
+        countdown();
     })
 
 
+    if( $('#question-video').length ){
+        $('.video-content').modal('show');
+         document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+            function myHandler(e) {
+                $('.video-content').modal('hide');
+                $('#video-question-content').removeClass('hide');
+                countdown();
+            }
+    }
 
     /*
     30 segundos para contestar cada pregunta

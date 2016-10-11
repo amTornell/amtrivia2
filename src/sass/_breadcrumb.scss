@@ -7,27 +7,29 @@ Basic Style
 .cd-breadcrumb, .cd-multi-steps {
   width: 90%;
   max-width: 768px;
-  padding: 0.5em 1em;
+  padding:10px 0;
   margin: 1em auto;
-  background-color: #edeff0;
-  border-radius: .25em;
 }
 .cd-breadcrumb:after, .cd-multi-steps:after {
   content: "";
   display: table;
   clear: both;
+
 }
 .cd-breadcrumb li, .cd-multi-steps li {
   display: inline-block;
   float: left;
-  margin: 0.5em 0;
+  margin: 5px 0;
+   @include bp-medium{
+    margin-bottom: 5px;
+   }
 }
 .cd-breadcrumb li::after, .cd-multi-steps li::after {
   /* this is the separator between items */
   display: inline-block;
   content: '\00bb';
-  margin: 0 .6em;
-  color: #959fa5;
+  margin: 0 5px;
+  color: $white;
 }
 .cd-breadcrumb li:last-of-type::after, .cd-multi-steps li:last-of-type::after {
   /* hide separator after the last item */
@@ -36,23 +38,30 @@ Basic Style
 .cd-breadcrumb li > *, .cd-multi-steps li > * {
   /* single step */
   display: inline-block;
-  font-size: 1.4rem;
-  color: #2c3f4c;
+  font-size: 12px;
+  color: $white;
+  .visited{
+    color: #78A8C9;
+  }
+   @include bp-medium{
+      br{
+        display: none;
+      }
+    }
 }
 .cd-breadcrumb li.current > *, .cd-multi-steps li.current > * {
   /* selected step */
-  color: #96c03d;
+  color: #39d7ef;
 }
 .no-touch .cd-breadcrumb a:hover, .no-touch .cd-multi-steps a:hover {
   /* steps already visited */
-  color: #96c03d;
+  color: #39d7ef;
 }
 .cd-breadcrumb.custom-separator li::after, .cd-multi-steps.custom-separator li::after {
   /* replace the default arrow separator with a custom icon */
   content: '';
   height: 16px;
   width: 16px;
-  background: url(../img/cd-custom-separator.svg) no-repeat center center;
   vertical-align: middle;
 }
 .cd-breadcrumb.custom-icons li > *::before, .cd-multi-steps.custom-icons li > *::before {
@@ -63,7 +72,6 @@ Basic Style
   width: 20px;
   margin-right: .4em;
   margin-top: -2px;
-  background: url(../img/cd-custom-icons-01.svg) no-repeat 0 0;
   vertical-align: middle;
 }
 .cd-breadcrumb.custom-icons li:not(.current):nth-of-type(2) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(2) > *::before {
@@ -97,10 +105,10 @@ Basic Style
     margin: 1.2em 0;
   }
   .cd-breadcrumb li::after, .cd-multi-steps li::after {
-    margin: 0 1em;
+    margin: 0 10px;
   }
   .cd-breadcrumb li > *, .cd-multi-steps li > * {
-    font-size: 1.6rem;
+    font-size: 12px;
   }
 }
 
@@ -156,7 +164,7 @@ Multi steps indicator
     margin: 0;
   }
   .cd-multi-steps li.visited::after {
-    background-color: #96c03d;
+    background-color: #39d7ef;
   }
   .cd-multi-steps li > *, .cd-multi-steps li.current > * {
     position: relative;
@@ -192,7 +200,7 @@ Multi steps indicator
   }
   .cd-multi-steps.text-center li.current > *, .cd-multi-steps.text-center li.visited > * {
     color: #ffffff;
-    background-color: #96c03d;
+    background-color: #39d7ef;
   }
   .cd-multi-steps.text-center.custom-icons li.visited a::before {
     /* change the custom icon for the visited item - check icon */
@@ -234,10 +242,10 @@ Multi steps indicator
   .cd-multi-steps.text-top li.visited > *::before,
   .cd-multi-steps.text-top li.current > *::before, .cd-multi-steps.text-bottom li.visited > *::before,
   .cd-multi-steps.text-bottom li.current > *::before {
-    background-color: #96c03d;
+    background-color: #39d7ef;
   }
   .no-touch .cd-multi-steps.text-top a:hover, .no-touch .cd-multi-steps.text-bottom a:hover {
-    color: #96c03d;
+    color: #39d7ef;
   }
   .no-touch .cd-multi-steps.text-top a:hover::before, .no-touch .cd-multi-steps.text-bottom a:hover::before {
     box-shadow: 0 0 0 3px rgba(150, 192, 61, 0.3);

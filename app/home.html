@@ -13,40 +13,42 @@
 </head>
 <body>
 
-  <div class="leaf leaf-left">
-    <img src="../images/hojas-left.png" alt="hojas">
-  </div>
-  <div class="leaf leaf-right">
-    <img src="../images/mayan_planta02.png" alt="hojas">
-  </div>
- <a id="btnSponsor" data-toggle="modal" data-target="#ourSponsors">our sponsors</a>
+
 
   <div id="the-wrapper">
     <header id="mainHeader">
-      <!-- menu desktop -->
-      <nav id="nav-main" class="menu">
-        <ul>
-          <li><a href="">Mecánica</a></li>
-          <li><a href="">Premios</a></li>
-          <li class="logo"><a href=""><img src="../images/mayan_logo.png" alt="mayan challenge"></a></li>
-          <li><a href="">Youtubers</a></li>
-          <li><a href="">Actividades</a></li>
-        </ul>
-      </nav>
-      <!-- /menu desktop -->
-      <!-- menu mobile -->
-      <div id="nav-trigger">
-          <span>Menu</span>
-      </div>
-      <nav id="nav-mobile">
-        <ul>
-          <li><a href="">Mecánica</a></li>
-          <li><a href="">Premios</a></li>
-          <li><a href="">Youtubers</a></li>
-          <li><a href="">Actividades</a></li>
-        </ul>
-      </nav>
-      <!-- / menu mobile -->
+       <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" /></a>
+       <!-- menu desktop -->
+            <nav id="nav-main" class="menu">
+                <ul>
+                    <li><a href="">Mecánica</a>
+                    </li>
+                    <li><a href="">Experiencias</a>
+                    </li>
+                    <li><a href="">Juega</a>
+                    </li>
+                    <li class="profile"><a href=""><span>Mi perfil<strong class="points"> / 110 pts</strong> </span></a> <a href="" class="logout">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /menu desktop -->
+            <!-- menu mobile -->
+            <div id="nav-trigger">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </div>
+            <nav id="nav-mobile">
+                <ul>
+                    <li><a href="">Mecánica</a>
+                    </li>
+                    <li><a href="">Experiencias</a>
+                    </li>
+                    <li><a href="">Juega</a>
+                    </li>
+                    <li>Mi perfil <a href="">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- / menu mobile -->
       <div class="user">
         <button onclick="window.location.href='logout'"  id="btn-logout"><span>Logout</span></button>
 
@@ -68,12 +70,17 @@
     <!-- dynamic -->
     <div class="container-center">
       <div class="row animated fadeInUp">
-        <div class="col-md-6 item-centered">
+        <div class="col-md-8 item-centered">
            <h1 class="main-title text-centered">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Vuela en nuestro simulador de Vuelo
           </h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eos animi eum, rerum unde maiores sapiente cupiditate nam deserunt! Quisquam nobis, facere dolore maxime, reiciendis laborum dolorum rerum autem voluptatem.</p>
-          <p class="text-centered"><a href="" class="btn-main glyphicon glyphicon-menu-right"><span>Participar</span></a></p>
+          <div class="col-md-6">
+            <button class="btn-main glyphicon glyphicon-menu-right" onclick="dataLayer.push({'action': 'jointheguest','redSocial': 'facebook','event': 'themayanchallenge'});window.location.href='loginFB/facebook'"><img src="../images/simulador_fb.png" alt="fb icon" class="social-icon"><span> FB LOGIN</span></button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn-main glyphicon glyphicon-menu-right" onclick="dataLayer.push({'action': 'jointheguest','redSocial': 'facebook','event': 'themayanchallenge'});window.location.href='loginFB/twitter'"><img src="../images/simulador_tw.png" alt="tw icon" class="social-icon"><span>TWITER LOGIN</span></button>
+          </div>
         </div>
       </div>
     </div>
