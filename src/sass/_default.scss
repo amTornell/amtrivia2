@@ -166,6 +166,41 @@ small{
 	}
 	
 }
+
+.profile-mobile{
+	position: absolute;
+	right: 5px;
+	top:60px;
+	width: 140px;
+		span{
+			float: left;
+			.points{
+				font-family: $font-thin;
+				color: $acento;
+			}
+		}
+		a{
+			float: left;
+			width: 100%;
+		}
+		.logout{
+			text-transform: uppercase;
+			font-size: 11px;
+			background: $acento;
+			border: 3px;
+			padding: 0px 5px;
+			height: 20px;
+			line-height: 20px;
+			width: 70px;
+			text-shadow: none;
+			font-family: $font-medium;
+			display: block;
+			text-align: center;
+			&:hover{
+
+			}
+		}
+	}
 .logo{
 		position: relative;
 		margin: 0px auto 0;
@@ -410,6 +445,7 @@ user
 
 .main-title{
 	margin: 10px 0;
+	text-align: center;
 	span{
 		color: $acento;
 	}

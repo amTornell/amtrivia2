@@ -16,7 +16,13 @@
 
   <div id="the-wrapper">
     <header id="mainHeader">
-      <!-- menu desktop -->
+      <ul class="languages">
+                <li><a href="">EN</a> / </li>
+                <li class="active"><a href="">ES</a>
+                </li>
+            </ul>
+            <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" />
+            </a>
       <!-- menu desktop -->
             <nav id="nav-main" class="menu">
                 <ul>
@@ -43,26 +49,14 @@
                     </li>
                     <li><a href="">Juega</a>
                     </li>
-                    <li>Mi perfil <a href="">Logout</a>
-                    </li>
                 </ul>
             </nav>
             <!-- / menu mobile -->
-      <div class="user">
-        <a href="">
-          <p><span class="avatar">
-            <img src="https://placeimg.com/100/150/people"></span> 
-          </p>
-          <p class="user-points-content">  
-            <span class="points">1500</span>
-            <button onclick="window.location.href='logout'"  id="btn-logout"><span>Logout</span></button>
-          </p>
-          <!--<p class="username">Nombre de usuario que puede ser largo</p>-->
-        </a>
-       <!-- <a class="btn-main glyphicon glyphicon-menu-right" data-toggle="modal" data-target="#ourSponsors" ><span>Our sponsors</span></a>-->
-
-      </div>
-       <a id="btnSponsorMobile" data-toggle="modal" data-target="#ourSponsors">our sponsors</a>
+         <div class="profile-mobile">
+            <a href=""><span>Mi perfil<strong class="points"> / 110 pts</strong> </span></a>
+            <a href="" class="logout">Logout</a>
+        </div>
+   
     </header>
     <!-- dynamic -->
     <div class="container-center">

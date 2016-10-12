@@ -248,6 +248,33 @@ small {
     text-shadow: none;
     font-family: "Neue Haas Unica W01 Medium It"; }
 
+.profile-mobile {
+  position: absolute;
+  right: 5px;
+  top: 60px;
+  width: 140px; }
+  .profile-mobile span {
+    float: left; }
+    .profile-mobile span .points {
+      font-family: "Neue Haas Unica W01 Thin";
+      color: #39D7EF; }
+  .profile-mobile a {
+    float: left;
+    width: 100%; }
+  .profile-mobile .logout {
+    text-transform: uppercase;
+    font-size: 11px;
+    background: #39D7EF;
+    border: 3px;
+    padding: 0px 5px;
+    height: 20px;
+    line-height: 20px;
+    width: 70px;
+    text-shadow: none;
+    font-family: "Neue Haas Unica W01 Medium It";
+    display: block;
+    text-align: center; }
+
 .logo {
   position: relative;
   margin: 0px auto 0;
@@ -429,7 +456,8 @@ user
 
 ******************************/
 .main-title {
-  margin: 10px 0; }
+  margin: 10px 0;
+  text-align: center; }
   .main-title span {
     color: #39D7EF; }
 
@@ -689,6 +717,19 @@ h4 {
     overflow: hidden;
     border-radius: 50%;
     border: 4px solid #39D7EF; }
+  @media only screen and (max-width: 30em) {
+    #the-profile .avatar {
+      float: none;
+      margin: 0 auto;
+      display: block; }
+      #the-profile .avatar .user-avatar {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto; }
+      #the-profile .avatar h1 {
+        font-size: 16px; }
+      #the-profile .avatar .points-total {
+        font-size: 14px; } }
 
 #the-profile .points {
   text-transform: uppercase; }
@@ -734,7 +775,11 @@ h4 {
       text-transform: uppercase; }
     @media only screen and (max-width: 30em) {
       #the-profile .levels li {
-        width: 50%; } }
+        width: 50%; }
+        #the-profile .levels li:last-child {
+          float: none;
+          margin: 0 auto;
+          clear: both; } }
   #the-profile .levels h3 {
     font-size: 30px;
     font-family: "Neue Haas Unica W01 Thin";
@@ -772,38 +817,52 @@ ol.list {
     width: 50px;
     float: left;
     padding-right: 10px; }
+  @media only screen and (max-width: 30em) {
+    ol.list {
+      font-size: 0.8rem; } }
 
 strong {
   font-family: "Neue Haas Unica W01 Medium It"; }
-
-.participant-1 img, .participant-1 .user-avatar {
-  border-color: #66FF66 !important; }
-
-.participant-1 picture {
-  border-color: #66FF66 !important; }
-
-.participant-2 img, .participant-2 .user-avatar {
-  border-color: #EBE54D !important; }
-
-.participant-2 picture {
-  border-color: #EBE54D !important; }
-
-.participant-3 img, .participant-3 .user-avatar {
-  border-color: #BF1388 !important; }
-
-.participant-3 picture {
-  border-color: #BF1388 !important; }
-
-.participant-4 img, .participant-4 .user-avatar {
-  border-color: #39D7EF !important; }
-
-.participant-4 picture {
-  border-color: #39D7EF !important; }
 
 .alert-normal {
   background: #39D7EF;
   color: #fff;
   text-align: center; }
+
+#influencers picture {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  border: 6px solid; }
+  #influencers picture img {
+    width: 100%; }
+
+#influencers h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 20px; }
+  @media only screen and (max-width: 30em) {
+    #influencers h2 {
+      padding-bottom: 10px; } }
+
+#influencers li {
+  padding-bottom: 20px; }
+
+#influencers p {
+  padding-bottom: 20px; }
+
+#influencers .social li {
+  display: inline-block;
+  padding: 10px 1px; }
+
+#influencers .social a {
+  display: block; }
+  #influencers .social a img {
+    border-radius: 50%;
+    border: 1px solid #fff; }
 
 /* -------------------------------- 
 
