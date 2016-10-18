@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <title>Nombre de campaña</title>
-    
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -14,8 +13,14 @@
 <body>
   <div id="the-wrapper">
     <header id="mainHeader">
-     <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" /></a>
-            <!-- menu desktop -->
+      <ul class="languages">
+                <li><a href="">EN</a> / </li>
+                <li class="active"><a href="">ES</a>
+                </li>
+            </ul>
+            <a href="/" class="logo"><img src="../images/simulador_logo.png" alt="Simulador" />
+            </a>
+      <!-- menu desktop -->
             <nav id="nav-main" class="menu">
                 <ul>
                     <li><a href="">Mecánica</a>
@@ -41,89 +46,36 @@
                     </li>
                     <li><a href="">Juega</a>
                     </li>
-                    <li>Mi perfil <a href="">Logout</a>
-                    </li>
                 </ul>
             </nav>
             <!-- / menu mobile -->
-      
+         <div class="profile-mobile">
+            <a href=""><span>Mi perfil<strong class="points"> / 110 pts</strong> </span></a>
+            <a href="" class="logout">Logout</a>
+        </div>
+   
     </header>
     <!-- dynamic -->
     <div class="container-center">
-      <div id="the-profile" class="row ">
-         <div class="col-sm-8 item-centered">
-          <div class="avatar clearfix animated fadeIn participant-2">
-            <div class="user-avatar">
-              <img src="https://placeimg.com/200/200/people" >
-            </div>
-          </div>
-          <div class="col-sm-6">
-          <h1 class="main-title">
-            Nombre de usuario
+      <div class="row animated fadeInUp">
+        <div class="col-md-8 item-centered">
+           <h1 class="main-title ">
+           ¡Muchas felicidades! Concluiste la dinámica. 
           </h1>
-          <p class="points points-total"><span class="count">200</span> puntos en total</p>
-          </div>
-
-          <table class="table">
-              <tbody>
-                  <tr>
-                      <th scope="row"><span class="count">2</span> de 3 Amigos para desbloquear nivel</th>
-                      <td><span class="count">100</span> puntos</td>
-                  </tr>
-                  <tr>
-                     <th scope="row"><span class="count">25</span> puntos para superar a tu rival más próximo</th>
-                     <td></td>
-                  </tr>
-              </tbody>
-          </table>
-
-
-
-          <h2>Niveles</h2>
-          <ol class="levels">
-            <li class="passed">
-              <h3>1</h3>
-              <img src="../images/simulador_juego_am.png" alt="am">
-              <p>
-                Aeroméxico
-              </p>
-            </li>
-            <li class="passed">
-                <h3>2</h3><img src="../images/simulador_juego_entretenimiento.png" alt="am">
-                <p>Entretenimiento a bordo</p>
-            </li>
-            <li class="current">
-                
-                <a href="">
-                  <h3>3</h3>
-                  <img src="../images/simulador_juego_7879.png" alt="am">
-                   <p>787</p>
-                </a>
-
-            </li>
-            <li>
-               <h3>4</h3>
-                <img src="../images/simulador_juego_simulador_bloqueado.png" alt="am">
-                <p>Simulador</p>
-            </li>
-            <li>
-               <h3>5</h3>
-               <img src="../images/simulador_juego_7878_bloqueado.png" alt="am">
-               <p>Quetzalcoátl</p>
-            </li>
-          </ol>
-         
+          <p class="text-centered">Recuerda que compartir la liga te hará ganar puntos, ¡no dejes de hacerlo! </p>
+        
+          <br>
           <div class="col-sm-6 button-share">
             <a class="btn-main glyphicon glyphicon-menu-right" onclick="dataLayer.push({'action': 'jointhequest','redSocial': 'facebook','event': 'experienciadevuelo'});window.location.href='loginFB/facebook'"><img src="http://www.vuela.aeromexico.com/experienciadevuelo/assets/images/simulador_fb.png" alt="fb icon" class="social-icon"><span>Comparte</span></a>
           </div>
           <div class="col-sm-6 button-share">
             <a class="btn-main glyphicon glyphicon-menu-right" onclick="dataLayer.push({'action': 'jointhequest','redSocial': 'facebook','event': 'experienciadevuelo'});window.location.href='loginFB/twitter'"><img src="http://www.vuela.aeromexico.com/experienciadevuelo/assets/images/simulador_tw.png" alt="tw icon" class="social-icon"><span>Comparte</span></a>
           </div>
-        </div>  
-
+        </div>
       </div>
     </div>
-        <footer id="mainFooter">
+    <!-- footer -->
+     <footer id="mainFooter">
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-info">
@@ -133,8 +85,26 @@
                 </div>
             </div>
         </footer>
-    
+
   </div><!-- #the-wrapper -->
+
+
+
+  <!-- modal T&C -->
+  <div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="terms">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Terms and conditions</h4>
+        </div>
+        <div class="modal-body">
+          en ingles
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- / modal T&C -->
 
 
   <!-- scripts -->

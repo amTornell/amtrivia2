@@ -55,6 +55,12 @@ a{
 .super-image{
 	padding: 20px 0;
 }
+.float-right{
+	float: right;
+}
+.text-centered{
+	text-align: center;
+}
 /*****************
 	header
 
@@ -67,9 +73,7 @@ header{
 	margin-top: 20px;
 	background: url('../../images/simulador_menu01.png') no-repeat top center;
 	@include bp-small {
-		margin-top: 5px; 
-		background-size: 200% auto;
-		background-position: center 50px;
+		background: $blue-dark;
     }
     .languages{
     	width: 80px;
@@ -172,6 +176,10 @@ small{
 	right: 5px;
 	top:60px;
 	width: 140px;
+	display: none;
+	@include bp-small {
+		display: block;
+	}
 		span{
 			float: left;
 			.points{
@@ -326,10 +334,15 @@ nav#nav-mobile {
     display: block; }
 
   nav#nav-main {
-    display: none; }
+     display: none; 
+ }
 
   nav#nav-mobile {
-    display: block; }
+    display: block; 
+  }
+  .profile-mobile{
+	display: block;
+  }
 }
 
 
@@ -446,6 +459,7 @@ user
 .main-title{
 	margin: 10px 0;
 	text-align: center;
+	font-family: $font-thin;
 	span{
 		color: $acento;
 	}

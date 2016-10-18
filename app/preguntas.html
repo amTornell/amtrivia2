@@ -60,6 +60,34 @@
         </header>
         <!-- dynamic -->
         <div class="container-center">
+          <!-- success -->
+          <div class="alert alert-success">
+            <div class="row">
+              <div class="col-sm-8 item-centered">
+                <h2><span class="glyphicon glyphicon-ok"></span> ¡Lo lograste! </h2>
+                <p class="text-centered">Comparte tu liga para incrementar tu puntaje.</p>
+                  <div class="col-sm-6">
+                    <a class="btn-main glyphicon glyphicon-menu-right" onclick="dataLayer.push({'action': 'jointhequest','redSocial': 'facebook','event': 'experienciadevuelo'});window.location.href='loginFB/facebook'"><img src="assets/images/simulador_fb.png" alt="fb icon" class="social-icon"><span>Comparte</span></a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a class="btn-main glyphicon glyphicon-menu-right" onclick="dataLayer.push({'action': 'jointhequest','redSocial': 'facebook','event': 'experienciadevuelo'});window.location.href='loginFB/twitter'"><img src="assets/images/simulador_tw.png" alt="tw icon" class="social-icon"><span>Comparte</span></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- / success -->
+          <!-- error-->
+          <div class="alert alert-danger">
+            <div class="row">
+              <div class="col-sm-8 item-centered">
+                <h2><span class="glyphicon glyphicon-remove"></span> Hubo un error </h2>
+                <p>Lo sentimos, inténtalo de nuevo</p>
+               
+              </div>
+            </div>
+          </div>
+          <!-- / error -->
+
             <div id="trivia" class="row ">
                 <h1 class="main-title text-centered">Juega</h1>
                 <br>
