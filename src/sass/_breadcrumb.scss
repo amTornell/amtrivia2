@@ -208,7 +208,7 @@ Multi steps indicator
   }
 
   .cd-multi-steps.text-top li, .cd-multi-steps.text-bottom li {
-    width: 80px;
+    width: 90px;
     text-align: center;
     a{
       color: $white;
@@ -220,7 +220,7 @@ Multi steps indicator
     position: absolute;
     left: 50%;
     /* 40px is the <li> right margin value */
-    width: calc(100% + 90px);
+    width: calc(100% + 70px);
   }
   .cd-multi-steps.text-top li > *::before, .cd-multi-steps.text-bottom li > *::before {
     /* this is the spot indicator */

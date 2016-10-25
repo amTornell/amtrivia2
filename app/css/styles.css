@@ -1032,7 +1032,7 @@ Multi steps indicator
     /* change the custom icon for the visited item - check icon */
     background-position: 0 -60px; }
   .cd-multi-steps.text-top li, .cd-multi-steps.text-bottom li {
-    width: 80px;
+    width: 90px;
     text-align: center; }
     .cd-multi-steps.text-top li a, .cd-multi-steps.text-bottom li a {
       color: #fff;
@@ -1042,7 +1042,7 @@ Multi steps indicator
     position: absolute;
     left: 50%;
     /* 40px is the <li> right margin value */
-    width: calc(100% + 90px); }
+    width: calc(100% + 70px); }
   .cd-multi-steps.text-top li > *::before, .cd-multi-steps.text-bottom li > *::before {
     /* this is the spot indicator */
     content: '';
@@ -1163,7 +1163,7 @@ form .small {
 /***********
             Validaciones
 ***************************/
-input.parsley-success, select.parsley-success, textarea.parsley-success, .alert-success {
+input.parsley-success, select.parsley-success, textarea.parsley-success, .alert-success, .alert-advice, .alert-advice1, .alert-advice3, .alert-message, .alert-message2 {
   color: #fff;
   background-color: #19D2AD;
   border: 0;
@@ -1175,7 +1175,7 @@ input.parsley-error, select.parsley-error, textarea.parsley-error, .alert-danger
   border: 0;
   border-radius: 0; }
 
-.alert-success, .alert-danger {
+.alert-success, .alert-danger, .alert-advice, .alert-advice1, .alert-advice3, .alert-message, .alert-message2 {
   text-align: center; }
 
 .parsley-errors-list {
